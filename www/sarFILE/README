@@ -17,12 +17,14 @@
 - git, docker, docker-compose must be installed
 - Download repository and enter the directory
 	git clone https://github.com/cemtan/sar2html.git
-	cd sar2html
+	cd sar2html/www
+	./sar2html -s
 - If you are behind proxy edit bin/webserver/Dockerile edit 4 lines regarding proxy 
 	ENV http_proxy <YOUR HTTP PROXY>
 	ENV https_proxy <YOUR HTTPS PROXY>
 	RUN pear config-set http_proxy <YOUR HTTP PROXY>
 - Build the image by docker-compose and run the container
+	cd sar2html
 	docker-compose up
 
 ### Manual Installation
