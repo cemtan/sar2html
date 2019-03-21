@@ -7,7 +7,8 @@
 - Download repository and enter the directory
 ```bash
 git clone https://github.com/cemtan/sar2html.git
-cd sar2html
+cd sar2html/www
+./sar2html -s
 ```
 - If you are behind proxy edit bin/webserver/Dockerile edit 3 lines regarding proxy 
 ```bash
@@ -17,6 +18,7 @@ RUN pear config-set http_proxy <YOUR HTTP PROXY>
 ```
 - Build the image by docker-compose and run the container
 ```bash
+cd sar2html
 docker-compose up
 ```
 ### Manual Installation
