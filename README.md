@@ -10,7 +10,7 @@ git clone https://github.com/cemtan/sar2html.git
 cd sar2html/www
 ./sar2html -s
 ```
-- If you are behind proxy edit bin/webserver/Dockerile edit 3 lines regarding proxy 
+- If you are behind proxy edit 3 lines regarding proxy in bin/webserver/Dockerile
 ```bash
 ENV http_proxy <YOUR HTTP PROXY>
 ENV https_proxy <YOUR HTTPS PROXY>
