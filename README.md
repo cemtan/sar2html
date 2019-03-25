@@ -36,7 +36,7 @@ post_max_size=80MB
 ```bash
 ./sar2html -c
 ```
-- Open http://<IP ADDRESS OF WEB SERVER>/index.php
+- Open http://<ip_address_of_your_webserver>/index.php
 - Now it is ready to work.
 
 ## RECENT CHANGES
