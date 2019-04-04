@@ -7,10 +7,9 @@
 - Download repository and enter the directory
 ```bash
 git clone https://github.com/cemtan/sar2html.git
-cd sar2html/www
-./sar2html -s
+cd sar2html
 ```
-- If you are behind proxy edit 3 lines regarding proxy in bin/webserver/Dockerile
+- If you are behind proxy edit bin/webserver/Dockerile edit 3 lines regarding proxy 
 ```bash
 ENV http_proxy <YOUR HTTP PROXY>
 ENV https_proxy <YOUR HTTPS PROXY>
@@ -18,11 +17,8 @@ RUN pear config-set http_proxy <YOUR HTTP PROXY>
 ```
 - Build the image by docker-compose and run the container
 ```bash
-cd sar2html
 docker-compose up
 ```
-- Open http://<ip_address_of_your_webserver>/index.php
-- Now it is ready to work.
 ### Manual Installation
 -------------------
 - Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
@@ -38,7 +34,7 @@ post_max_size=80MB
 ```bash
 ./sar2html -c
 ```
-- Open http://<ip_address_of_your_webserver>/index.php
+- Open http://<IP ADDRESS OF WEB SERVER>/index.php
 - Now it is ready to work.
 
 ## RECENT CHANGES

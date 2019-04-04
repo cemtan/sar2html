@@ -1,8 +1,8 @@
 FROM php:7.1.20-apache
 
-#ENV http_proxy <YOUR HTTP PROXY>
-#ENV https_proxy <YOUR HTTPS PROXY>
-#RUN pear config-set http_proxy <YOUR HTTP PROXY>
+ENV http_proxy http://web-proxy.sdc.hpecorp.net:8080/
+ENV https_proxy http://web-proxy.sdc.hpecorp.net:8080/
+RUN pear config-set http_proxy http://web-proxy.sdc.hpecorp.net:8080/
 
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
@@ -24,12 +24,6 @@ RUN docker-php-ext-enable xdebug
 
 RUN apt-get -y install libmcrypt-dev
 RUN docker-php-ext-install mcrypt
-
-#RUN apt-get -y install libsqlite3-dev libsqlite3-0 mysql-client
-#RUN docker-php-ext-install pdo_mysql 
-#RUN docker-php-ext-install pdo_sqlite
-#RUN docker-php-ext-install mysqli
-
 RUN docker-php-ext-install curl
 RUN docker-php-ext-install tokenizer
 RUN docker-php-ext-install json
@@ -48,3 +42,13 @@ RUN docker-php-ext-install -j$(nproc) gd
 
 # Enable apache modules
 RUN a2enmod rewrite headers
+
+# Update
+EXPOSE 80 443
+COPY ./www /var/www/html
+COPY ./config/php/php.ini /usr/local/etc/php/php.ini
+COPY ./config/vhosts /etc/apache2/sites-enabled
+COPY ./bin/entrypoint.sh /sbin/entrypoint.sh
+WORKDIR /var/www/html
+RUN chmod 700 /sbin/entrypoint.sh
+ENTRYPOINT ["/sbin/entrypoint.sh"]

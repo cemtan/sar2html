@@ -524,7 +524,6 @@ elif [ $1 = "-c" ]; then
 	echo -n "Please enter www group: "
 	read S2_WWWG
 	mkdir -p $SA_LOC/uPLOAD/
-	mkdir -p $SA_LOC/logs/
 	chown -R $S2_WWWU:$S2_WWWG $SA_LOC sarDATA sarFILE sar2html index.php LICENSE
 	echo "sar2html initialized. Now you may open index.php via your browser."
 	exit 0
@@ -532,7 +531,6 @@ elif [ $1 = "-c" ]; then
 elif [ $1 = "-s" ]; then
 	if [ ! -d $SA_LOC/uPLOAD ]; then
 	  mkdir -p $SA_LOC/uPLOAD/
-	  mkdir -p $SA_LOC/logs/
 	  for webown in www http apache; do 
 		if (grep $webown /etc/passwd &> /dev/null); then
 			S2_WWWU=`grep $webown /etc/passwd | awk -F: '{ print $1 }'`
