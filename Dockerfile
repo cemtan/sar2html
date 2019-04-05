@@ -48,7 +48,5 @@ EXPOSE 80 443
 COPY ./www /var/www/html
 COPY ./config/php/php.ini /usr/local/etc/php/php.ini
 COPY ./config/vhosts /etc/apache2/sites-enabled
-COPY ./bin/entrypoint.sh /sbin/entrypoint.sh
 WORKDIR /var/www/html
-RUN chmod 700 /sbin/entrypoint.sh
-ENTRYPOINT ["/sbin/entrypoint.sh"]
+ENTRYPOINT ["/var/www/html/sarFILE/entrypoint.sh"]
