@@ -1,8 +1,8 @@
 FROM php:7.1.20-apache
 
-ENV http_proxy http://web-proxy.sdc.hpecorp.net:8080/
-ENV https_proxy http://web-proxy.sdc.hpecorp.net:8080/
-RUN pear config-set http_proxy http://web-proxy.sdc.hpecorp.net:8080/
+#ENV http_proxy <PROXY:PORT>
+#ENV https_proxy <PROXY:PORT>
+#RUN pear config-set <PROXY:PORT>
 
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
