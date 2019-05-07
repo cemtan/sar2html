@@ -1,15 +1,60 @@
 # SAR2HTML 3.2.1
+Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
 
-## INSTALLATION
-
-### Dockerized Installation
-- git, docker, docker-compose must be installed
+## RUNNING THE DOCKER IMAGE 
+### ON DOCKER
+If you want your performance data to be persistent you need to create directory for them in your host: 
+```bash
+mkdir /var/sarDATA
+docker run -p 80:80 -v /tmp/data:/var/www/html/sarDATA cemtan/sar2html:v3.2.1 
+```
+Otherwise you may directly run the image:
+```bash
+docker run -p 80:80 cemtan/sar2html:v3.2.1 
+```
+### ON KUBERNETES
 - Download repository and enter the directory
 ```bash
 git clone https://github.com/cemtan/sar2html.git
-cd sar2html
+cd sar2html/config/kubernetes
 ```
-- If you are behind proxy edit bin/webserver/Dockerile edit 3 lines regarding proxy 
+- Deploy docker image
+ - If you want your performance data to be persistent you need to create directory for them in your host:
+```bash
+kubectl apply -f sar2html-pvc.yaml
+kubectl apply -f sar2html-deploy-persistent.yaml
+```
+ - Otherwise you may directly run the image:
+```bash
+kubectl apply -f sar2html-deploy-ephemeral.yaml
+```
+- Expose your pod. 
+ - For local installation of kubernetes (like minikube, microk8s...):
+```bash
+kubectl apply -f sar2html-service-nodeport.yaml
+```
+ - For kubernetes which is able to use loadbalancer:
+```bash
+kubectl apply -f sar2html-service-loadbalancer.yaml
+```
+
+### ON OPENSHIFT CONTAINER PLATFORM
+Download template file of sar2html from git repository
+```bash
+wget https://github.com/cemtan/sar2html/blob/master/config/ocp/sar2html.yaml
+```
+On master node create template from the sar2html.yaml
+```bash
+oc create -f sar2html.yaml 
+```
+Now you may search for "SAR Database and Plotter" in Service Catalog and you may deploy sar2html through web-console.
+## CREATING THE DOCKER IMAGE
+- Download repository and enter the directory
+```bash
+git clone https://github.com/cemtan/sar2html.git
+cd sar2html/www
+```
+- If you are behind proxy edit 3 lines regarding proxy in bin/webserver/Dockerile
 ```bash
 ENV http_proxy <YOUR HTTP PROXY>
 ENV https_proxy <YOUR HTTPS PROXY>
@@ -17,12 +62,13 @@ RUN pear config-set http_proxy <YOUR HTTP PROXY>
 ```
 - Build the image by docker-compose and run the container
 ```bash
-docker-compose up
+cd sar2html
+docker build -t sar2html:v3.2.1 .
 ```
-### Manual Installation
+
+## INSTALLATION ON PHYSICAL OR VIRTUAL MACHINE
 -------------------
-- Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
-- apache2, php5, sar, gnuplot v4.0+, libpng, gawk, grep, sed, libpng-devel v1.2.7+, coreutils, expect, php5-openssl must be installed
+Apache2, php5, sar, gnuplot v4.0+, libpng, gawk, grep, sed, libpng-devel v1.2.7+, coreutils, expect, php5-openssl must be installed
 - Edit php.ini file and set:
 ```bash
 upload_max_filesize=2GB
@@ -32,9 +78,13 @@ post_max_size=80MB
 - Extract sar2html.tar.gz under root directory of your web server or create subdirectory for it.
 - Configure sar2html. You need to know apache user and group for setup.
 ```bash
+./sar2html -s
+```
+or 
+```bash
 ./sar2html -c
 ```
-- Open http://<IP ADDRESS OF WEB SERVER>/index.php
+- Open http://<ip_address_of_your_webserver>/index.php
 - Now it is ready to work.
 
 ## RECENT CHANGES
