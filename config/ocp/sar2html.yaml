@@ -8,11 +8,11 @@ message: |-
   For more information about using this template, including OpenShift considerations, see https://cloud.docker.com/repository/docker/cemtan/sar2html
 metadata:
   annotations:
-    description: SAR Database and Plotter (Satellite) application that serves static content. For more information about using this template, including OpenShift considerations, see https://cloud.docker.com/repository/docker/cemtan/sar2html
+    description: SAR Database and Plotter application that serves static content. For more information about using this template, including OpenShift considerations, see https://cloud.docker.com/repository/docker/cemtan/sar2html
     iconClass: icon-apache
-    openshift.io/display-name: SAR Database and Plotter (Satellite)
+    openshift.io/display-name: SAR Database and Plotter
     openshift.io/documentation-url: https://cloud.docker.com/repository/docker/cemtan/sar2html
-    openshift.io/long-description: This template defines resources needed to develop a static application served by SAR Database and Plotter (Satellite), including a build configuration and application deployment configuration.
+    openshift.io/long-description: This template defines resources needed to develop a static application served by SAR Database and Plotter, including a build configuration and application deployment configuration.
     openshift.io/provider-display-name: cemtan
     openshift.io/support-url: https://cloud.docker.com/repository/docker/cemtan/sar2html
     tags: sar2html
