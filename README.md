@@ -116,7 +116,7 @@ or
 - Error:	Wrong argument is provided for SA_Redhat_3_b.
   - Fix:	Fixed by feisty penguin <d3athp3nguin@users.sf.net>
 #### 2.3.2
--Added bookmarks to PDF file.
+- Added bookmarks to PDF file.
 #### 2.3.1
 - Reformatted PDF file.
 #### 2.3.0
