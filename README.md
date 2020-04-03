@@ -6,11 +6,11 @@ Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.
 If you want your performance data to be persistent you need to create directory for them in your host: 
 ```bash
 mkdir /var/sarDATA
-docker run -p 80:80 -v /tmp/data:/var/www/html/sarDATA cemtan/sar2html:v3.2.1 
+docker run -p 80:80 -v /tmp/data:/var/www/html/sarDATA -h sar2html.localdomain cemtan/sar2html:v3.2.1 
 ```
 Otherwise you may directly run the image:
 ```bash
-docker run -p 80:80 cemtan/sar2html:v3.2.1 
+docker run -p 80:80 -h sar2html.localdomain cemtan/sar2html:v3.2.1 
 ```
 ### ON KUBERNETES
 - Download repository and enter the directory
