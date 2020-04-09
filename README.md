@@ -13,7 +13,11 @@ Otherwise you may directly run the image:
 docker run -p 80:80 -h sar2html.localdomain cemtan/sar2html:v3.2.1 
 ```
 ### ON KUBERNETES
-- Download repository and enter the directory
+- Simply run
+```bash
+kubectl run sar2html --image=cemtan/sar2html:v3.2.1 --port=80 --expose
+```
+- Or download repository and enter the directory
 ```bash
 git clone https://github.com/cemtan/sar2html.git
 cd sar2html/config/kubernetes
