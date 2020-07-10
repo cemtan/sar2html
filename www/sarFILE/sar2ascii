@@ -430,10 +430,16 @@ SC_RELEASE=$SC_DIST"_"$SC_REV
 # GATHERING SAR DATA --------------------------------------------------------------------- START
 if echo $SA_FILES | grep sa > /dev/null; then
  for FILE in $SA_FILES; do
+	SA_file=$SA_LOC/$FILE
+	if echo $FILE | grep '\.bz2$' > /dev/null; then
+		mkdir $SC_location/tmp
+		bzcat $SA_file > $SC_location/tmp/$FILE
+		SA_file=$SC_location/tmp/$FILE
+	fi
 	if [ $SC_RELEASE = "Redhat_6" ] || [ $SC_RELEASE = "Redhat_7" ] || [ $SC_RELEASE = "Suse_11" ] || [ $SC_RELEASE = "Suse_12" ] || [ $SC_RELEASE = "Ubuntu_18" ]; then
-		SA_DATE=`sar -b -f $SA_LOC/$FILE| grep -i $SC_OS | grep -i -v restart | uniq | head -n1 | awk '{ print $4 }'` # --> modified by feistypenguin
+		SA_DATE=`sar -b -f $SA_file| grep -i $SC_OS | grep -i -v restart | uniq | head -n1 | awk '{ print $4 }'` # --> modified by feistypenguin
 	else
-		SA_DATE=`sar -b -f $SA_LOC/$FILE| grep -i $SC_OS | grep -i -v restart | uniq | awk '{ print $NF }'`
+		SA_DATE=`sar -b -f $SA_file| grep -i $SC_OS | grep -i -v restart | uniq | awk '{ print $NF }'`
 	fi
 	date=`echo $SA_DATE | awk -F/ '{ print $3 }'`
 	if [ $date -lt 100 ]; then
@@ -451,12 +457,12 @@ if echo $SA_FILES | grep sa > /dev/null; then
 	   SA_item=`echo $SA_ITEMS | awk -F: '{ print $1 }' | awk -F, '{ print $1 }' | awk '{ print $1 }' | awk -F/ '{ print $1 }'`
 	   SA_SPECIAL="SA_"$SC_RELEASE"_SPECIAL"
 	   eval "SA_SPECIAL=\$$SA_SPECIAL"
-	   sar -$SA_option -f $SA_LOC/$FILE 2> /dev/null | grep -i -v $SC_OS | grep -i -v restart | grep -v '^$' | grep -i -v Average | grep -v $SA_item | tr '.' ',' | sed 's/^/'$SA_DATE' /g' | tr -s " " >>  $SC_location/$OPTION 
+	   sar -$SA_option -f $SA_file 2> /dev/null | grep -i -v $SC_OS | grep -i -v restart | grep -v '^$' | grep -i -v Average | grep -v $SA_item | tr '.' ',' | sed 's/^/'$SA_DATE' /g' | tr -s " " >>  $SC_location/$OPTION 
 	   if ( echo $SA_SPECIAL | grep $OPTION > /dev/null ); then
 	     if [ $SC_OS != "Linux" ]; then
 		rm -f $SC_location/$OPTION
 		avg=""
-		sar -$SA_option -f $SA_LOC/$FILE 2>/dev/null | grep -i -v $SC_OS | grep -i -v restart | grep -v '^$' | grep -v $SA_item | tr '.' ',' | while read a b c d e f g h i j k l; do
+		sar -$SA_option -f $SA_file 2>/dev/null | grep -i -v $SC_OS | grep -i -v restart | grep -v '^$' | grep -v $SA_item | tr '.' ',' | while read a b c d e f g h i j k l; do
 		    if ( echo $a | grep ":" > /dev/null ); then        
 			echo $SA_DATE" "$a" "$b" "$c" "$d" "$e" "$f" "$g" "$h" "$i" "$j" "$k" "$l >> $SC_location/$OPTION
 			time=$a
@@ -494,6 +500,8 @@ if echo $SA_FILES | grep sa > /dev/null; then
 		fi
 	   done
 	done
+	rm -f $SC_location/tmp/$FILE
+	rmdir $SC_location/tmp 2> /dev/null
  done
 # GATHERING SAR DATA ----------------------------------------------------------------------- END
 ################################################################################################
