@@ -60,7 +60,7 @@ objects:
       spec:
         containers:
         - env: []
-          image: cemtan/sar2html:v3.2.1
+          image: cemtan/sar2html:v3.2.2
           name: sar2html-container
           ports:
           - containerPort: 80

@@ -1,6 +1,6 @@
 #########################################################################
 #                                                                       #
-# SAR2HTML 3.2.1                                                        #
+# SAR2HTML 3.2.2                                                        #
 #                                                                       #
 # Written by Cem TAN                                               	#
 # Mail address: tan.cem@gmail.com                                       #
@@ -17,7 +17,7 @@
 
 # REDHAT 3--------------------------------------------------------------------------------------
 SA_Redhat_3='b B c d I_SUM n_DEV n_EDEV n_SOCK P_ALL q r R v w W y'
-SA_Redhat_3_b='tps rtps wtps,1 2 3 4 5, I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
+SA_Redhat_3_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Redhat_3_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS'
 SA_Redhat_3_c='proc/s,1 2 3,PROCESS CREATION ACTIVITY'
 SA_Redhat_3_d='tps,1 2 4,NUMBER OF TRANSFERS:rd_sec/s wr_sec/s,1 2 5 6,NUMBER OF SECTOR r/w'
@@ -37,7 +37,7 @@ SA_Redhat_3_SPECIAL='d n_DEV n_EDEV P_ALL'
 
 # REDHAT 4--------------------------------------------------------------------------------------
 SA_Redhat_4='b B c d I_SUM n_DEV n_EDEV n_SOCK P_ALL q r R v w W y'
-SA_Redhat_4_b='tps rtps wtps,1 2 3 4 5, I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
+SA_Redhat_4_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Redhat_4_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS'
 SA_Redhat_4_c='proc/s,1 2 3,PROCESS CREATION ACTIVITY'
 SA_Redhat_4_d='tps,1 2 4,NUMBER OF TRANSFERS:rd_sec/s wr_sec/s,1 2 5 6,NUMBER OF SECTOR r/w'
@@ -57,7 +57,7 @@ SA_Redhat_4_SPECIAL='d n_DEV n_EDEV P_ALL'
 
 # REDHAT 5--------------------------------------------------------------------------------------
 SA_Redhat_5='b B c d I_SUM n_DEV n_EDEV n_NFS n_NFSD n_SOCK P_ALL q r R v w W y'
-SA_Redhat_5_b='tps rtps wtps,1 2 3 4 5, I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
+SA_Redhat_5_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Redhat_5_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS'
 SA_Redhat_5_c='proc/s,1 2 3,PROCESS CREATION ACTIVITY'
 SA_Redhat_5_d='tps,1 2 4,NUMBER OF TRANSFERS:rd_sec/s wr_sec/s,1 2 5 6,NUMBER OF SECTOR r/w:avgrq-sz avgqu-sz,1 2 7 8,I/O REQUESTS AND QUEUE LENGHT:await,1 2 9,AVEARGE WAIT TIME,svctm,1 2 10,AVERAGE SERVICE TIME:%util,1 2 11,CPU PERCENTAGE of I/O'
@@ -79,7 +79,7 @@ SA_Redhat_5_SPECIAL='d n_DEV n_EDEV P_ALL'
 
 # REDHAT 6---------------------------------------------------------------------------------------
 SA_Redhat_6='b B d I_SUM n_DEV n_EDEV n_NFS n_NFSD n_SOCK P_ALL q r R S v w W y'
-SA_Redhat_6_b='tps rtps wtps,1 2 3 4 5, I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
+SA_Redhat_6_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Redhat_6_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS:pgfree/s pgscank/s pgscand/s pgsteal/s,1 2 7 8 9 10,PAGE OPERATIONS:%vmeff,1 2 11,EFFICIENCY OF PAGE RECLAIM'
 SA_Redhat_6_d='tps,1 2 4,NUMBER OF TRANSFERS:rd_sec/s wr_sec/s,1 2 5 6,NUMBER OF SECTOR r/w:avgrq-sz avgqu-sz,1 2 7 8,I/O REQUESTS AND QUEUE LENGHT:await,1 2 9,AVEARGE WAIT TIME,svctm,1 2 10,AVERAGE SERVICE TIME:%util,1 2 11,CPU PERCENTAGE of I/O'
 SA_Redhat_6_I_SUM='intr/s,1 2 4,INTERRUPT ACTIVITY'
@@ -123,7 +123,7 @@ SA_Redhat_7_SPECIAL='d n_DEV n_EDEV P_ALL'
 
 # SUSE 8----------------------------------------------------------------------------------------
 SA_Suse_8='b B c d I_SUM n_DEV n_EDEV n_SOCK U_ALL q r R v w W y'
-SA_Suse_8_b='tps rtps wtps,1 2 3 4 5, I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
+SA_Suse_8_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Suse_8_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:activepg inadtypg inaclnpg inatarpg,1 2 5 6 7 8,PAGE STATISTICS'
 SA_Suse_8_c='proc/s,1 2 3,PROCESS CREATION ACTIVITY'
 SA_Suse_8_d='tps,1 2 4,NUMBER OF TRANSFERS:blks/s,1 2 5,NUMBER OF TRANSFERRED BLOCKS'
@@ -143,7 +143,7 @@ SA_Suse_8_SPECIAL='d n_DEV n_EDEV U_ALL'
 
 # SUSE 9----------------------------------------------------------------------------------------
 SA_Suse_9='b B c d I_SUM n_DEV n_EDEV n_SOCK P_ALL q r R v w W y'
-SA_Suse_9_b='tps rtps wtps,1 2 3 4 5, I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
+SA_Suse_9_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Suse_9_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS'
 SA_Suse_9_c='proc/s,1 2 3,PROCESS CREATION ACTIVITY'
 SA_Suse_9_d='tps,1 2 4,NUMBER OF TRANSFERS:rd_sec/s wr_sec/s,1 2 5 6,NUMBER OF SECTOR r/w'
@@ -163,7 +163,7 @@ SA_Suse_9_SPECIAL='d n_DEV n_EDEV P_ALL'
 
 # SUSE 10---------------------------------------------------------------------------------------
 SA_Suse_10='b B c d I_SUM n_DEV n_EDEV n_NFS n_NFSD n_SOCK P_ALL q r R v w W y'
-SA_Suse_10_b='tps rtps wtps,1 2 3 4, I/O TRANSACTION:bread/s bwrtn/s,1 5 6,I/O TRANSFER RATE'
+SA_Suse_10_b='tps rtps wtps,1 2 3 4,I/O TRANSACTION:bread/s bwrtn/s,1 5 6,I/O TRANSFER RATE'
 SA_Suse_10_B='pgpgin/s pgpgout/s,1 2 3,PAGING STATISTICS:fault/s majflt/s,1 4 5,PAGE FAULTS:pgfree/s pgscank/s pgscand/s pgsteal/s,1 6 7 8 9,PAGE OPERATIONS:%vmeff,1 10,EFFICIENCY OF PAGE RECLAIM'
 SA_Suse_10_c='proc/s,1 2,PROCESS CREATION ACTIVITY'
 SA_Suse_10_d='tps,1 3,NUMBER OF TRANSFERS:rd_sec/s wr_sec/s,1 4 5,NUMBER OF SECTOR r/w:avgrq-sz avgqu-sz,1 6 7,I/O REQUESTS AND QUEUE LENGHT:await,1 8,AVEARGE WAIT TIME,svctm,1 9,AVERAGE SERVICE TIME:%util,1 10,CPU PERCENTAGE of I/O'
@@ -185,7 +185,7 @@ SA_Suse_10_SPECIAL='d n_DEV n_EDEV P_ALL'
 
 # SUSE 11---------------------------------------------------------------------------------------
 SA_Suse_11='b B d I_SUM n_DEV n_EDEV n_NFS n_NFSD n_SOCK P_ALL q r R S v w W y'
-SA_Suse_11_b='tps rtps wtps,1 2 3 4 5, I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
+SA_Suse_11_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Suse_11_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS:pgfree/s pgscank/s pgscand/s pgsteal/s,1 2 7 8 9 10,PAGE OPERATIONS:%vmeff,1 2 11,EFFICIENCY OF PAGE RECLAIM'
 SA_Suse_11_d='tps,1 2 4,NUMBER OF TRANSFERS:rd_sec/s wr_sec/s,1 2 5 6,NUMBER OF SECTOR r/w:avgrq-sz avgqu-sz,1 2 7 8,I/O REQUESTS AND QUEUE LENGHT:await,1 2 9,AVEARGE WAIT TIME,svctm,1 2 10,AVERAGE SERVICE TIME:%util,1 2 11,CPU PERCENTAGE of I/O'
 SA_Suse_11_I_SUM='intr/s,1 2 4,INTERRUPT ACTIVITY'
@@ -328,7 +328,7 @@ SA_SunOS_11_SPECIAL='d'
 SA_Ubuntu_18='b B d n_DEV n_EDEV n_NFS n_NFSD n_SOCK P_ALL q r H S v w W y'
 SA_Ubuntu_18_b='tps rtps wtps,1 2 3 4 5,I/O TRANSACTION:bread/s bwrtn/s,1 2 6 7,I/O TRANSFER RATE'
 SA_Ubuntu_18_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS:pgfree/s pgscank/s pgscand/s pgsteal/s,1 2 7 8 9 10,PAGE OPERATIONS:%vmeff,1 2 11,EFFICIENCY OF PAGE RECLAIM'
-SA_Ubuntu_18_d='tps,1 2 4,NUMBER OF KB TRANSFERS:rkB/s wkB/s,1 2 5 6,NUMBER OF KB r/w:areq-sz aqu-sz,1 2 7 8,I/O AVERAGE SIZE(KB) AND QUEUE LENGHT OF I/O REQUESTS:await,1 2 9,AVEARGE WAIT TIME,svctm,1 2 10,AVERAGE SERVICE TIME:%util,1 2 11,CPU PERCENTAGE of I/O'
+SA_Ubuntu_18_d='tps,1 2 4,NUMBER OF KB TRANSFERS:rkB/s wkB/s,1 2 5 6,NUMBER OF KB r/w:areq-sz aqu-sz,1 2 7 8,I/O AVERAGE SIZE(KB) AND QUEUE LENGHT OF I/O REQUESTS:await,1 2 9,AVEARGE WAIT TIME:svctm,1 2 10,AVERAGE SERVICE TIME:%util,1 2 11,CPU PERCENTAGE of I/O'
 SA_Ubuntu_18_H='kbhugfree kbhugused,1 2 3 4,HUGEPAGE UTILIZATION:%hugused,1 2 5,HUGEPAGE UTILIZATION %'
 SA_Ubuntu_18_n_DEV='rxkB/s txkB/s,1 2 6 7,NETWORK I/O:rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s,1 2 4 5 8 9 10,NETWORK STATISTICS:%ifutil,1 2 11,UTILIZATION (%)'
 SA_Ubuntu_18_n_EDEV='rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s,1 2 4 5 6 7 8 9 10 11 12,NETWORK ERROR STATISTICS'
@@ -344,6 +344,27 @@ SA_Ubuntu_18_w='proc/s,1 2 3,PROCESS CREATION ACTIVITY:cswch/s,1 2 4,SYSTEM SWIT
 SA_Ubuntu_18_W='pswpin/s pswpout/s,1 2 3 4,SWAPPING STATISTICS'
 SA_Ubuntu_18_y='rcvin/s txmtin/s framerr/s prtyerr/s brk/s ovrun/s,1 2 4 5 6 7 8 9,TTY DEVICE ACTIVITY'
 SA_Ubuntu_18_SPECIAL='d n_DEV n_EDEV P_ALL y'
+
+# UBUNTU 20 -------------------------------------------------------------------------------------
+SA_Ubuntu_20='b B d n_DEV n_EDEV n_NFS n_NFSD n_SOCK P_ALL q r H S v w W y'
+SA_Ubuntu_20_b='tps rtps wtps dtps,1 2 3 4 5 6,I/O TRANSACTION:bread/s bwrtn/s bdscd/s,1 2 7 8 9,I/O TRANSFER RATE'
+SA_Ubuntu_20_B='pgpgin/s pgpgout/s,1 2 3 4,PAGING STATISTICS:fault/s majflt/s,1 2 5 6,PAGE FAULTS:pgfree/s pgscank/s pgscand/s pgsteal/s,1 2 7 8 9 10,PAGE OPERATIONS:%vmeff,1 2 11,EFFICIENCY OF PAGE RECLAIM' 
+SA_Ubuntu_20_d='tps,1 2 4,NUMBER OF KB TRANSFERS:rkB/s wkB/s dkB/s,1 2 5 6 7,NUMBER OF KB r/w/d:areq-sz aqu-sz,1 2 8 9,I/O AVERAGE SIZE(KB) AND QUEUE LENGHT OF I/O REQUESTS:await,1 2 10,AVEARGE WAIT TIME:%util,1 2 11,CPU PERCENTAGE of I/O'
+SA_Ubuntu_20_H='kbhugfree kbhugused kbhugrsvd kbhugsurp,1 2 3 4 6 7,HUGEPAGE UTILIZATION:%hugused,1 2 5,HUGEPAGE UTILIZATION %'
+SA_Ubuntu_20_n_DEV='rxkB/s txkB/s,1 2 6 7,NETWORK I/O:rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s,1 2 4 5 8 9 10,NETWORK STATISTICS:%ifutil,1 2 11,UTILIZATION (%)'
+SA_Ubuntu_20_n_EDEV='rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s,1 2 4 5 6 7 8 9 10 11 12,NETWORK ERROR STATISTICS'
+SA_Ubuntu_20_n_NFS='read/s write/s,1 2 5 6,NUMBER OF RPC R/W:call/s retrans/s access/s getatt/s,1 2 3 4 7 8,NUMBER OF RPC REQUESTS AND ACCESSES'
+SA_Ubuntu_20_n_NFSD='sread/s swrite/s,1 2 10 11,NUMBER OF RPC R/W:scall/s badcall/s saccess/s sgetatt/s,1 2 3 4 12 13,NUMBER OF RPC REQUESTS AND ACCESSES: packet/s udp/s tcp/s,1 2 5 6 7,NUMBER OF NETWORK PACKETS:hit/s miss/s,1 2 8 9,NUMBER OF REPLY CACHE HITS AND MISSES'
+SA_Ubuntu_20_n_SOCK='totsck tcpsck udpsck rawsck ip-frag tcp-tw,1 2 3 4 5 6 7 8,NETWORK SOCKET STATISTICS'
+SA_Ubuntu_20_P_ALL='%user %system %idle,1 2 4 6 9,PROCESSOR ACTIVITY:%nice %iowait %steal,1 2 5 7 8,PROCESSOR ACTIVITY DETAILS'
+SA_Ubuntu_20_q='runq-sz,1 2 3,QUEUE LENGTH:plist-sz,1 2 4,NUMBER OF PROCESSES:blocked,1 2 8,NUMBER OF BLOCKED PROCESSES:ldavg-1 ldavg-5 ldavg-15,1 2 5 6 7,LOAD AVERAGE' 
+SA_Ubuntu_20_r='kbmemfree kbavail kbmemused kbbuffers kbcached kbcommit,1 2 3 4 5 7 8 9,MEMORY UTILIZATION:kbactive kbinact kbdirty,1 2 11 12 13,MEMORY UTILIZATION DETAILS:%memused %commit,1 2 6 10,MEMORY UTILIZATION %'
+SA_Ubuntu_20_S='kbswpfree kbswpused kbswpcad,1 2 3 4 6,SWAP UTILIZATION:%swpused %swpcad,1 2 5 7,SWAP UTILIZATION %'
+SA_Ubuntu_20_v='dentunusd,1 2 3,UNUSED CACHE ENTRIES:file-nr inode-nr,1 2 4 5,NUMBER OF FILE AND INODE HANDLERS:pty-nr,1 2 6,NUMBER OF PSEUDO-TERMINALS'
+SA_Ubuntu_20_w='proc/s,1 2 3,PROCESS CREATION ACTIVITY:cswch/s,1 2 4,SYSTEM SWITCHING ACTIVITY'
+SA_Ubuntu_20_W='pswpin/s pswpout/s,1 2 3 4,SWAPPING STATISTICS'
+SA_Ubuntu_20_y='rcvin/s txmtin/s framerr/s prtyerr/s brk/s ovrun/s,1 2 4 5 6 7 8 9,TTY DEVICE ACTIVITY'
+SA_Ubuntu_20_SPECIAL='d n_DEV n_EDEV P_ALL y'
 
 # OS DEPENDENT SAR PARAMETERS -------------------------------------------------------------- END
 ################################################################################################
@@ -396,7 +417,7 @@ case "$SC_OS" in
 			SC_DIST=$NAME
 			SC_REV=`echo $VERSION | cut -f1 -d.`
    		        SA_LOC="/var/log/sysstat"
-			if [ $ID != "Ubuntu" ] && [ $SC_REV != "18" ]; then
+			if [ $ID != "Ubuntu" ] && [ $SC_REV != "18" ] && [ $SC_REV != "20" ]; then
 				echo "This Operating System is not supported"
 				exit 1
 			fi
@@ -430,7 +451,7 @@ SC_RELEASE=$SC_DIST"_"$SC_REV
 # GATHERING SAR DATA --------------------------------------------------------------------- START
 if echo $SA_FILES | grep sa > /dev/null; then
  for FILE in $SA_FILES; do
-	if [ $SC_RELEASE = "Redhat_6" ] || [ $SC_RELEASE = "Redhat_7" ] || [ $SC_RELEASE = "Suse_11" ] || [ $SC_RELEASE = "Suse_12" ] || [ $SC_RELEASE = "Ubuntu_18" ]; then
+	if [ $SC_RELEASE = "Redhat_6" ] || [ $SC_RELEASE = "Redhat_7" ] || [ $SC_RELEASE = "Suse_11" ] || [ $SC_RELEASE = "Suse_12" ] || [ $SC_RELEASE = "Ubuntu_18" ] || [ $SC_RELEASE = "Ubuntu_20" ]; then
 		SA_DATE=`sar -b -f $SA_LOC/$FILE| grep -i $SC_OS | grep -i -v restart | uniq | head -n1 | awk '{ print $4 }'` # --> modified by feistypenguin
 	else
 		SA_DATE=`sar -b -f $SA_LOC/$FILE| grep -i $SC_OS | grep -i -v restart | uniq | awk '{ print $NF }'`

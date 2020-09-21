@@ -24,7 +24,7 @@ spec:
         persistentVolumeClaim:
           claimName: sar2html-pvc
       containers:
-      - image: cemtan/sar2html:v3.2.1
+      - image: cemtan/sar2html:v3.2.2
         imagePullPolicy: IfNotPresent
         name: sar2html
         volumeMounts:

@@ -1,21 +1,21 @@
-# SAR2HTML 3.2.1
-Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
+# SAR2HTML 3.2.2
+Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18, 20 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
 
 ## RUNNING THE DOCKER IMAGE 
 ### ON DOCKER
 If you want your performance data to be persistent you need to create directory for them in your host: 
 ```bash
 mkdir /var/sarDATA
-docker run -p 80:80 -v /tmp/data:/var/www/html/sarDATA -h sar2html.localdomain cemtan/sar2html:v3.2.1 
+docker run -p 80:80 -v /tmp/data:/var/www/html/sarDATA -h sar2html.localdomain cemtan/sar2html:v3.2.2 
 ```
 Otherwise you may directly run the image:
 ```bash
-docker run -p 80:80 -h sar2html.localdomain cemtan/sar2html:v3.2.1 
+docker run -p 80:80 -h sar2html.localdomain cemtan/sar2html:v3.2.2 
 ```
 ### ON KUBERNETES
 - Simply run
 ```bash
-kubectl run sar2html --image=cemtan/sar2html:v3.2.1 --port=80 --expose
+kubectl run sar2html --image=cemtan/sar2html:v3.2.2 --port=80 --expose
 ```
 - Or download repository and enter the directory
 ```bash
@@ -67,7 +67,7 @@ RUN pear config-set http_proxy <YOUR HTTP PROXY>
 - Build the image by docker-compose and run the container
 ```bash
 cd sar2html
-docker build -t sar2html:v3.2.1 .
+docker build -t sar2html:v3.2.2 .
 ```
 
 ## INSTALLATION ON PHYSICAL OR VIRTUAL MACHINE
@@ -78,7 +78,7 @@ Apache2, php5, sar, gnuplot v4.0+, libpng, gawk, grep, sed, libpng-devel v1.2.7+
 upload_max_filesize=2GB
 post_max_size=80MB
 ```
-- Download sar2html from https://sourceforge.net/projects/sar2html/files/sar2html-3.2.1.tar.gz/download
+- Download sar2html from https://sourceforge.net/projects/sar2html/files/sar2html-3.2.2.tar.gz/download
 - Extract sar2html.tar.gz under root directory of your web server or create subdirectory for it.
 - Configure sar2html. You need to know apache user and group for setup.
 ```bash
@@ -92,6 +92,9 @@ or
 - Now it is ready to work.
 
 ## RECENT CHANGES
+#### 3.2.2
+- sar2html supports Ubuntu 20 now.
+- minor fixes
 #### 3.2.1
 - sar2html supports Ubuntu 18 now.
 - fixed some coding problems.

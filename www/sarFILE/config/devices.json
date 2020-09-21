@@ -1,0 +1,13 @@
+{
+  "d": "Disk",
+  "n_DEV": "Nic",
+  "n_EDEV": "Nic",
+  "P_ALL": "Cpu",
+  "U_ALL": "Cpu",
+  "Rd": "Disk",
+  "Mq": "Cpu",
+  "Mu": "Cpu",
+  "H": "Hba",
+  "L": "Path",
+  "y": "Tty"
+}

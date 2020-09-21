@@ -1,6 +1,6 @@
 #########################################################################
 #                                                                       #
-# SAR2HTML 3.2.1                                                        #
+# SAR2HTML 3.2.2                                                        #
 #                                                                       #
 # Written by Cem TAN                                               	#
 # Mail address: tan.cem@gmail.com                                       #
@@ -27,12 +27,12 @@
 
 ### Manual Installation
 -------------------
-- Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
+- Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18, 20 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
 - apache2, php5, sar, gnuplot v4.0+, libpng, gawk, grep, sed, libpng-devel v1.2.7+, coreutils, expect, php5-openssl must be installed
 - Edit php.ini file and set:
 	upload_max_filesize=2GB
 	post_max_size=80MB
-- Download sar2html from https://sourceforge.net/projects/sar2html/files/sar2html-3.2.1.tar.gz/download
+- Download sar2html from https://sourceforge.net/projects/sar2html/files/sar2html-3.2.2.tar.gz/download
 - Extract sar2html.tar.gz under root directory of your web server or create subdirectory for it.
 - Configure sar2html. You need to know apache user and group for setup.
 	./sar2html -c
@@ -40,6 +40,9 @@
 - Now it is ready to work.
 
 ## RECENT CHANGES
+#### 3.2.2
+- sar2html supports Ubuntu 20 now.
+- minor fixes
 #### 3.2.1
 - sar2html supports Ubuntu 18 now.
 - fixed some coding problems.
