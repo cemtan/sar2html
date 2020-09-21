@@ -5,7 +5,7 @@
         "title": "I/O Rates",
         "data": [
           {
-            "title": " I/O TRANSACTION",
+            "title": "I/O TRANSACTION",
             "columntitle": "tps rtps wtps",
             "column": "1 2 3 4 5"
           },
@@ -240,7 +240,7 @@
         "title": "I/O Rates",
         "data": [
           {
-            "title": " I/O TRANSACTION",
+            "title": "I/O TRANSACTION",
             "columntitle": "tps rtps wtps",
             "column": "1 2 3 4 5"
           },
@@ -475,7 +475,7 @@
         "title": "I/O Rates",
         "data": [
           {
-            "title": " I/O TRANSACTION",
+            "title": "I/O TRANSACTION",
             "columntitle": "tps rtps wtps",
             "column": "1 2 3 4 5"
           },
@@ -765,7 +765,7 @@
         "title": "I/O Rates",
         "data": [
           {
-            "title": " I/O TRANSACTION",
+            "title": "I/O TRANSACTION",
             "columntitle": "tps rtps wtps",
             "column": "1 2 3 4 5"
           },
