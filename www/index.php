@@ -2,7 +2,7 @@
 
 #########################################################################
 #                                                                       #
-# SAR2HTML 3.2.1                                                        #
+# SAR2HTML 3.2.2                                                        #
 #                                                                       #
 # Written by Cem TAN                                               	#
 # Mail address: tan.cem@gmail.com                                       #
@@ -315,6 +315,25 @@ class OPTIONS {
                 var $SA_Ubuntu_18_w = 'System Switching Activity';
                 var $SA_Ubuntu_18_W = 'Swapping Statistics';
                 var $SA_Ubuntu_18_y = 'TTY Device Activity';
+
+	var $SA_Ubuntu_20 = 'b B d n_DEV n_EDEV n_NFS n_NFSD n_SOCK P_ALL q r H S v w W y';
+                var $SA_Ubuntu_20_b = 'I/O Rates';
+                var $SA_Ubuntu_20_B = 'Paging Statistics';
+                var $SA_Ubuntu_20_d = 'Disk I/O & Statistics';
+                var $SA_Ubuntu_20_H = 'Hugepage Utilization';
+                var $SA_Ubuntu_20_n_DEV = 'Network I/O & Statistics';
+                var $SA_Ubuntu_20_n_EDEV = 'Network Error Statistics';
+                var $SA_Ubuntu_20_n_NFS = 'NFS Statistics';
+                var $SA_Ubuntu_20_n_NFSD = 'NFSD Statistics';
+                var $SA_Ubuntu_20_n_SOCK = 'Network Socket Statistics';
+                var $SA_Ubuntu_20_P_ALL = 'Processor Activity';
+                var $SA_Ubuntu_20_q = 'Process Queue';
+                var $SA_Ubuntu_20_r = 'Memory & Swap Utilization';
+                var $SA_Ubuntu_20_S = 'Swap Utilization';
+                var $SA_Ubuntu_20_v = 'Kernel Tables';
+                var $SA_Ubuntu_20_w = 'System Switching Activity';
+                var $SA_Ubuntu_20_W = 'Swapping Statistics';
+                var $SA_Ubuntu_20_y = 'TTY Device Activity';
 }
 class SPECIAL {
 	var $SA_Redhat_3 = 'd n_DEV n_EDEV P_ALL';
@@ -334,6 +353,7 @@ class SPECIAL {
 	var $SA_SunOS_10 = 'd';
 	var $SA_SunOS_11 = 'd';
 	var $SA_Ubuntu_18 = 'd n_DEV n_EDEV P_ALL y';
+	var $SA_Ubuntu_20 = 'd n_DEV n_EDEV P_ALL y';
 }
 class DEVICES {
 	var $SA_d = 'Disk';
@@ -461,7 +481,7 @@ function doForm($getplot,$gethost)
 	<div id="wrapper">
 	<div class="menu">
         <div align="center">
-	<span style='font-size:8pt;font-family:"Arial","sans-serif";font-weight:bold;text-align:center' align="center">sar2html Ver 3.2.1</span>
+	<span style='font-size:8pt;font-family:"Arial","sans-serif";font-weight:bold;text-align:center' align="center">sar2html Ver 3.2.2</span>
 	<br>
 	<span style='font-size:7pt;font-family:"Arial","sans-serif";text-align:center' align="center">(<a href="https://sourceforge.net/p/sar2html/donate/" target="_blank">Donate</a> if you like!)</span></div>
 	<br>
@@ -1281,7 +1301,7 @@ function doForm($getplot,$gethost)
 		echo "<br><span style='font-size:8pt;font-family:\"Arial\",\"sans-serif\"'>";
 		echo "<UL>";
 		echo "<LI>Plotting tools, sar2html and index.php only run on Linux server.<br>";
-		echo "<LI>HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18  and Solaris 5.9, 5.10 are supported for reporting.<br>";
+		echo "<LI>HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18, 20  and Solaris 5.9, 5.10 are supported for reporting.<br>";
 		echo "<LI>Install Apache2, Php5, Expect and GnuPlot with png support (Suse11 is recommended. It provides gnuplot with native png support.)<br>";
 		echo "<LI>Edit php.ini file and set:<br>";
 		echo "`upload_max_filesize` to 2GB.<br>";
