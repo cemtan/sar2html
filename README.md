@@ -71,7 +71,7 @@ RUN pear config-set http_proxy <YOUR HTTP PROXY>
 ```
 - If you want to build tour own image, clone repository or download source code and extract it:
 ```bash
-sudo docker build --tag sar2html:4.0.0
+sudo docker build --tag sar2html:4.0.0 .
 ```
 
 ## INSTALLATION ON PHYSICAL OR VIRTUAL MACHINE
