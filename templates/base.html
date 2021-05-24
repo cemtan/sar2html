@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/s2style.css">
+    <script src="/static/jquery.min.js"></script>
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="{{ url_for('index')}}" style="font-size:18px"><b>sar2html</b></a>
+      <a href="{{ url_for('about')}}">About</a>
+      <form id="form" action="{{ url_for('index') }}" method=post enctype=multipart/form-data>
+        <div class="box">
+            <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple="true" />
+            <label for="file">New Host</label>
+            <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+            <script>
+                document.getElementById("file").onchange = function() {
+                    document.getElementById("form").submit();
+                };
+            </script>
+        </div>
+      </form>
+      <!--<div style="position: absolute; right: 0px; top: 50%;">
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+    </div>-->
+    </div>
+    <div class="wrapper">
+          {% block content %} {% endblock %}
+    </div>
+  </body>
+</html>
+

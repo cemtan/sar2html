@@ -1,0 +1,69 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+labels:
+  app: sar2html
+  template: sar2html
+message: |-
+  The following service(s) have been created in your project: sar2html.
+  For more information about using this template, including OpenShift considerations, see https://cloud.docker.com/repository/docker/cemtan/sar2html
+metadata:
+  annotations:
+    description: SAR Database and Plotter application that serves static content. For more information about using this template, including OpenShift considerations, see https://cloud.docker.com/repository/docker/cemtan/sar2html
+    iconClass: icon-apache
+    openshift.io/display-name: SAR Database and Plotter
+    openshift.io/documentation-url: https://cloud.docker.com/repository/docker/cemtan/sar2html
+    openshift.io/long-description: This template defines resources needed to develop a static application served by SAR Database and Plotter, including a build configuration and application deployment configuration.
+    openshift.io/provider-display-name: cemtan
+    openshift.io/support-url: https://cloud.docker.com/repository/docker/cemtan/sar2html
+    tags: sar2html
+    template.openshift.io/bindable: "false"
+  name: sar2html
+  namespace: openshift
+objects:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: sar2html
+  spec:
+    ports:
+    - name: web
+      port: 5000
+      targetPort: 5000
+    selector:
+      app: sar2html
+- apiVersion: v1
+  kind: Route
+  metadata:
+    name: sar2html
+  spec:
+    host: sar2html.localdomain
+    to:
+      kind: Service
+      name: sar2html
+- apiVersion: v1
+  kind: DeploymentConfig
+  metadata:
+    label:
+      app: sar2html
+    name: sar2html
+  spec:
+    replicas: 1
+    selector:
+      app: sar2html
+    strategy:
+      type: Rolling
+    template:
+      metadata:
+        labels:
+          app: sar2html
+        name: sar2html
+      spec:
+        containers:
+        - env: []
+          image: cemtan/sar2html:4.0.0
+          name: sar2html-container
+          ports:
+          - containerPort: 5000
+          resources:
+            limits:
+              memory: 512Mi

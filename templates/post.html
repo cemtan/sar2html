@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/css/ion.rangeSlider.min.css"/>
+<script src="/static/ion.rangeSlider.min.js"></script>
+<div class="sidebar">
+    <div>
+        <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #d6d3d3;">
+                <td class="tabletite" style="width:130px;"><h7><b>Hostname</b></h7></td>
+                <td class="tabletite" style="width:290px;"><h7>{{ host['name'] }}</h7></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #fcf6f6;">
+                <td class="tabletite" style="width:130px;"><h7><b>Operating System</b></h7></td>
+                <td class="tabletite" style="width:290px;"><h7>{{ host['os'] }}</h7></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #fcf6f6;">
+                <td class="tabletite" style="width:130px;"><h7><b>Creation Date</b></h7></td>
+                <td class="tabletite" style="width:290px;"><h7>{{ host['date'] }}</h7></td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div style="width: 94%;">
+    <form name="formSlider" action="{{ url_for('post', host_id=host['id']) }}" method="POST">
+    <input id="dateSlider" type="hidden" name="dateSlider" value="" class="irs-hidden-input" tabindex="-1" readonly="">
+    <script>
+      function tsToDate (ts) {
+          var d = new Date(ts);
+      
+          return d.toLocaleDateString({
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+          });
+      }
+      
+      $("#dateSlider").ionRangeSlider({
+          skin: "modern",
+          prettify: tsToDate,
+          type: "double",
+          grid: true,
+          from: {{ values }}.indexOf({{ start }}),
+          to: {{ values }}.indexOf({{ end }}),
+          values: {{ values }},
+          drag_interval: true,
+          onFinish: function(data) {
+            document.formSlider.submit();;
+            }
+      });
+    </script>
+    </form>
+    </div>
+    <br />
+    <div>
+        <form name="deleteRange" action="{{ url_for('deleteRange', host_id=host['id']) }}" method="POST">
+            <input id="dateSlider" type="hidden" name="dateSlider" value="{{ start }};{{ end }}"> 
+            <a style="color: chocolate;" href="javascript:submitform()" onClick="javascript:confirmRangeSubmit()">Delete Range</a>
+            <script>
+                function confirmRangeSubmit()
+                    {
+                    var agree=confirm("Are you sure you wish to delete the range?");
+                    if (agree)
+                        document.forms["deleteRange"].submit();
+                    else
+                        return false ;
+                    }
+            </script>
+            </form>
+    </div>
+    <br>
+    <div>
+        <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        {% for title in titles %}
+            {% if title|length %}
+                <tr style="border-bottom: 1px solid #fcf6f6;">
+                    <td class="tabletite" style="width:4200px;"><h7><a href="#title-{{ loop.index }}">{{ title }}</a></h7></td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+        </table>
+    </div>
+</div>
+<div class="mainplot">
+    <script src="/static/vega@5"></script>
+    <script src="/static/vega-lite@5"></script>
+    <script src="/static/vega-embed@6"></script>
+    {% for chart in charts %}
+    {% set title = titles[loop.index - 1] %}
+    <p class="title" id="title-{{ loop.index }}">{{ title }}</p>
+    <div id="plot-{{ loop.index }}">
+        <script>
+          // embed when document is loaded, to ensure vega library is available
+          // this works on all modern browsers, except IE8 and older
+          document.addEventListener("DOMContentLoaded", function(event) {
+              var spec = {{ chart | safe}};
+              var opt = {
+                "mode": "vega-lite",
+                "renderer": "canvas",
+                "actions": {"editor": true, "source": true, "export": true}
+              };
+              vegaEmbed('#plot-{{ loop.index }}', spec, opt).catch(console.err);
+          });
+        </script>
+    </div>
+    <br><br><br>
+    {% endfor %}
+</div>
+{% endblock %}

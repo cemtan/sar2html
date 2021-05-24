@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="sar2html-4-0-0">sar2html 4.0.0</h1>
+<p>Plotting tools for system stats (sar data).
+HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18, 20 and Solaris 5.9, 5.10, 5.11 are supported.</p>
+<h2 id="running-the-docker-image">RUNNING THE DOCKER IMAGE</h2>
+<h3 id="on-docker">ON DOCKER</h3>
+<p>If you want your performance data to be persistent you need to create directory for them in your host: </p>
+<pre><code class="lang-bash"><span class="hljs-title">mkdir</span> /<span class="hljs-class"><span class="hljs-keyword">data</span></span>
+<span class="hljs-title">docker</span> run -p <span class="hljs-number">5000</span>:<span class="hljs-number">5000</span> -v /<span class="hljs-class"><span class="hljs-keyword">data</span>:/sar2html/<span class="hljs-keyword">data</span> -d -h sar2html.localdomain cemtan/sar2html:4.0.0</span>
+</code></pre>
+<p>Otherwise you may directly run the image:</p>
+<pre><code class="lang-bash">docker run -<span class="hljs-selector-tag">p</span> <span class="hljs-number">5000</span>:<span class="hljs-number">5000</span> -h sar2html<span class="hljs-selector-class">.localdomain</span> cemtan/sar2html:<span class="hljs-number">4.0</span>.<span class="hljs-number">0</span>
+</code></pre>
+<h3 id="on-kubernetes">ON KUBERNETES</h3>
+<ul>
+<li>Simply run<pre><code class="lang-bash"><span class="hljs-comment">kubectl</span> <span class="hljs-comment">run</span> <span class="hljs-comment">sar2html</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">image=cemtan/sar2html:4</span><span class="hljs-string">.</span><span class="hljs-comment">0</span><span class="hljs-string">.</span><span class="hljs-comment">0</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">port=5000</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">expose</span>
+</code></pre>
+</li>
+<li>Or download repository and enter the directory<pre><code class="lang-bash">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/cemtan/sar2html.git
+<span class="hljs-keyword">cd</span> sar2html/<span class="hljs-keyword">conf</span>/kubernetes
+</code></pre>
+</li>
+<li>Deploy docker image<ul>
+<li>If you want your performance data to be persistent you need to create directory for them in your host:<pre><code class="lang-bash">kubectl apply <span class="hljs-_">-f</span> sar2html-pvc.yaml
+kubectl apply <span class="hljs-_">-f</span> sar2html-deploy-persistent.yaml
+</code></pre>
+</li>
+<li>Otherwise you may directly run the image:<pre><code class="lang-bash">kubectl apply <span class="hljs-_">-f</span> sar2html-deploy-ephemeral.yaml
+</code></pre>
+</li>
+<li>Expose your pod. </li>
+<li>For local installation of kubernetes (like minikube, microk8s...):<pre><code class="lang-bash">        kubectl apply <span class="hljs-_">-f</span> sar2html-service-nodeport.yaml
+</code></pre>
+</li>
+<li>For kubernetes which is able to use loadbalancer:<pre><code class="lang-bash">        kubectl apply <span class="hljs-_">-f</span> sar2html-service-loadbalancer.yaml
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="on-openshift-container-platform">ON OPENSHIFT CONTAINER PLATFORM</h3>
+<ul>
+<li>Download repository and enter the directory<pre><code class="lang-bash">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/cemtan/sar2html.git
+<span class="hljs-keyword">cd</span> sar2html/<span class="hljs-keyword">conf</span>/ocp
+</code></pre>
+</li>
+<li>On master node create template from the sar2html.yaml<pre><code class="lang-bash">oc create <span class="hljs-_">-f</span> sar2html.yaml
+</code></pre>
+Now you may search for &quot;SAR Database and Plotter&quot; in Service Catalog and you may deploy sar2html through web-console.</li>
+</ul>
+<h2 id="creating-the-docker-image">CREATING THE DOCKER IMAGE</h2>
+<ul>
+<li>Download repository and enter the directory<pre><code class="lang-bash">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/cemtan/sar2html.git
+cd sar2html
+</code></pre>
+</li>
+<li>If you are behind proxy edit 3 lines regarding proxy in dockerile<pre><code class="lang-bash"><span class="hljs-keyword">ENV</span> http_proxy &lt;YOUR HTTP PROXY&gt;
+<span class="hljs-keyword">ENV</span> https_proxy &lt;YOUR HTTPS PROXY&gt;
+<span class="hljs-keyword">RUN</span><span class="bash"> pear config-set http_proxy &lt;YOUR HTTP PROXY&gt;</span>
+</code></pre>
+</li>
+<li>If you want to build tour own image, clone repository or download source code and extract it:<pre><code class="lang-bash">sudo docker build --<span class="hljs-keyword">tag</span> <span class="hljs-title">sar2html</span>:<span class="hljs-number">4.0</span>.<span class="hljs-number">0</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="installation-on-physical-or-virtual-machine">INSTALLATION ON PHYSICAL OR VIRTUAL MACHINE</h2>
+<hr>
+<ul>
+<li>Install <ul>
+<li>python3</li>
+<li>python3-dev</li>
+<li>gcc</li>
+<li>libc-dev</li>
+</ul>
+</li>
+<li>Download repository and enter the repository<pre><code class="lang-bash">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/cemtan/sar2html.git
+cd sar2html
+</code></pre>
+</li>
+<li>Install python modules<pre><code class="lang-bash">pip3 <span class="hljs-keyword">install</span> -r requirements.txt
+</code></pre>
+</li>
+<li>Run<pre><code class="lang-bash"><span class="hljs-keyword">python3</span> sar2html.<span class="hljs-keyword">py</span>
+</code></pre>
+</li>
+<li>Open http://<ip_address_of_your_host>:5000</li>
+<li>Now it is ready to work.</li>
+</ul>
+<h2 id="recent-changes">RECENT CHANGES</h2>
+<h4 id="4-0-0">4.0.0</h4>
+<ul>
+<li>Leaving apache, php behind... sar2html is pure python now.</li>
+</ul>
+<h4 id="3-2-2">3.2.2</h4>
+<li>sar2html supports Ubuntu 20 now.</li>
+<li>minor fixes<h4 id="3-2-1">3.2.1</h4>
+</li>
+<li>sar2html supports Ubuntu 18 now.</li>
+<li>fixed some coding problems.<h4 id="3-1-1">3.1.1</h4>
+</li>
+<li>sar2html supports SLES 12 now.<h4 id="3-0-1">3.0.1</h4>
+</li>
+<li>Fixed some configuring and capturing issues (thanks to James Kenney)<h4 id="3-0-0">3.0.0</h4>
+</li>
+<li>New user interface is available.</li>
+<li>Added navigation tab.<h4 id="2-4-3">2.4.3</h4>
+</li>
+<li>Added Redhat 7 support.</li>
+<li>Fixed rare SA_DATE parsing issue (thanks to feistypenguin)</li>
+<li>Fixed merging new and old sar data errors caused by device removal (patched by feistypenguin)</li>
+<li>Fixed plotting errors caused by device removal (patched by James Kenney)<h4 id="2-4-2">2.4.2</h4>
+</li>
+<li>Solaris 11 is supported now.</li>
+<li>Fixed HP-UX related issues. <h4 id="2-4-1">2.4.1</h4>
+</li>
+<li>Changed timeout settings and dependencies.<h4 id="2-4-0">2.4.0</h4>
+</li>
+<li>sar2html is able to connect servers to capture report now.<h4 id="2-3-3">2.3.3</h4>
+</li>
+<li>Error: If a server has performed a restart recently, it puts a &quot;LINUX RESTART&quot; entry in sar logs. When sar2ascii tries to grep out the date for a day using sar output it keys on the word &quot;Linux&quot;. Ignoring case... so the &quot;LINUX RESTART&quot; entry will get globbed in with the date entry.
+<ul>
+<li>Fix:     Fixed by James Kenney <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x6a;&#x61;&#109;&#x65;&#115;&#119;&#105;&#x6c;&#108;&#x69;&#x61;&#x6d;&#107;&#101;&#110;&#110;&#x65;&#x79;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x6a;&#x61;&#109;&#x65;&#115;&#119;&#105;&#x6c;&#108;&#x69;&#x61;&#x6d;&#107;&#101;&#110;&#110;&#x65;&#x79;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></li>
+</ul>
+</li>
+<li>Error:    Wrong argument is provided for SA_Redhat_3_b.<ul>
+</li>Fix:    Fixed by feisty penguin <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x64;&#x33;&#97;&#116;&#x68;&#x70;&#51;&#110;&#103;&#117;&#x69;&#110;&#64;&#117;&#x73;&#x65;&#x72;&#115;&#46;&#x73;&#102;&#x2e;&#x6e;&#101;&#116;">&#x64;&#x33;&#97;&#116;&#x68;&#x70;&#51;&#110;&#103;&#117;&#x69;&#110;&#64;&#117;&#x73;&#x65;&#x72;&#115;&#46;&#x73;&#102;&#x2e;&#x6e;&#101;&#116;</a></li>
+</ul></li>
+<h4 id="2-3-2">2.3.2</h4>
+</li>
+</ul>
+</li>
+<li>Added bookmarks to PDF file.<h4 id="2-3-1">2.3.1</h4>
+</li>
+<li>Reformatted PDF file.<h4 id="2-3-0">2.3.0</h4>
+</li>
+<li>sar2html generates PDF formatted report now.<h4 id="2-2-2">2.2.2</h4>
+</li>
+<li>Fixed bug causing &quot;Argument list too long&quot; error while too many devices exist.</li>
+<li>Added show/hide devices option to web interface. Clicking device headers hides or shows device list.<h4 id="2-2-1">2.2.1</h4>
+</li>
+<li>Make-up<h4 id="2-2-0">2.2.0</h4>
+</li>
+<li>Added delete option<h4 id="2-1-2">2.1.2</h4>
+</li>
+<li>Fixed bugs<h4 id="2-1-1">2.1.1</h4>
+</li>
+<li>Added installation note<h4 id="2-1-0">2.1.0</h4>
+</li>
+<li>Added Redhat 6 Support</li>
+<li>Fixed issues regarding Sles 11 Hosts</li>
+</ul>
+{% endblock %}

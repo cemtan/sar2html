@@ -1,0 +1,8 @@
+uwsgi
+db-sqlite3
+Flask
+Flask-Threads
+altair
+altair_data_server
+pandas
+vega_datasets

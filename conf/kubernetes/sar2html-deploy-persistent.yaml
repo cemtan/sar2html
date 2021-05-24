@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: sar2html
+  name: sar2html
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: sar2html
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: sar2html
+    spec:
+      volumes:
+      - name: sar2html-data
+        persistentVolumeClaim:
+          claimName: sar2html-pvc
+      containers:
+      - image: cemtan/sar2html:4.0.0
+        imagePullPolicy: IfNotPresent
+        name: sar2html
+        volumeMounts:
+        - mountPath: "/sar2html/data"
+          name: sar2html-data
+      restartPolicy: Always

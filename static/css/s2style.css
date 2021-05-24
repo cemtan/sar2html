@@ -1,0 +1,119 @@
+*/:root {
+    --font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+  }
+  
+  a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(13, 65, 13);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  html {
+    font-family:sans-serif;
+    line-height:1.15;
+    -webkit-text-size-adjust:100%;
+    -webkit-tap-highlight-color:transparent
+  }
+  body {
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:11px;
+    font-weight:100;
+    line-height:1.5;
+    color:#212529;
+    text-align:left;
+    background-color:#fff
+  }
+  .navbar {
+    overflow: auto;
+    background-color: #eee;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+  }
+  
+  .navbar a, label {
+    float: left;
+    display: block;
+    color: #555;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a, label:hover {
+    background: #eee;
+    color: black;
+  }
+  .main {
+    margin-top: 40px;
+  }
+  #wrapper {
+    margin-top: 40px;
+    padding-top: 40px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    font: 12px Arial, Helvetica, sans-serif;
+    background: #FFFFFF;
+    display:table;
+    z-index: 0;
+    position: absolute;
+}
+.sidebar {
+  height: 100%;
+  width: 450px;
+  position: fixed;
+  z-index: 1;
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 80px;
+  padding-left:52px;
+  overflow: auto;
+  /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); 
+  height: 100%; */
+}
+.mainplot{
+  width: -moz-calc(98% - 520px);
+  width: -webkit-calc(98% - 520px);
+  width: calc(98% - 520px);
+  background: #FFFFFF;
+  border: 0px solid #DDD;
+  border-radius: 3px;
+  vertical-align:top;
+  padding-top: 20px;
+  overflow: auto;
+  margin-left: 550px;
+  z-index: 1;
+  top: -20px;
+}
+.title {
+  text-align: left;
+  padding-top: 60px;
+  margin-top: -60px;
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
