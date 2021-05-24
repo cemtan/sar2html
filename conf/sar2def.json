@@ -1,0 +1,4756 @@
+{
+  "hpux_11.11": {
+    "options": {
+      "a": {
+        "alias": "FileAccess",
+        "title": "Use of File Access Routines",
+        "data": [
+          {
+            "id": "1",
+            "title": "USE OF FILE ACCESS SYSTEM ROUTINES",
+            "parameter": "iget/s namei/s dirbk/s"
+          }
+        ]
+      },
+      "b": {
+        "alias": "BufferActivity",
+        "title": "Buffer Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "BUFFER ACTIVITY PART 1",
+            "parameter": "bread/s bwrit/s lread/s lwrit/s pread/s pwrit/s"
+          },
+          {
+            "id": "2",
+            "title": "BUFFER ACTIVITY PART 2",
+            "parameter": "%rcache %wcache"
+          }
+        ]
+      },
+      "c": {
+        "alias": "SystemCalls",
+        "title": "Statistics of System Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF CHARACTERS TRANSFERRED BY R/W SYSTEM CALLS",
+            "parameter": "rchar/s wchar/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SYSTEM CALLS",
+            "parameter": "scall/s"
+          },
+          {
+            "id": "3",
+            "title": "R/W FORK AND EXEC SYSTEM CALLS",
+            "parameter": "sread/s swrit/s fork/s exec/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "r+w/s blks/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "3",
+            "title": "SERVICE AND WAIT TIMEi",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "4",
+            "title": "BUSY TIME",
+            "parameter": "%busy"
+          }
+        ]
+      },
+      "Sm": {
+        "alias": "SystemVCalls",
+        "title": "Number of System V Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF SYSTEM V CALLS",
+            "parameter": "msg/s sema/s select/s"
+          }
+        ]
+      },
+      "Mq": {
+        "alias": "RunSwapQueue",
+        "title": "Run & Swap Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "RUN AND SWAP QUEUE",
+            "parameter": "runq-sz swpq-sz"
+          },
+          {
+            "id": "2",
+            "title": "RUN AND SWAP QUEUE %",
+            "parameter": "%runocc %swpocc"
+          }
+        ]
+      },
+      "Mu": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%usr %sys %wio %idle"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-sz inod-sz file-sz"
+          },
+          {
+            "id": "2",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-ov inod-ov file-ov"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SwapSystemSwitching",
+        "title": "Swap & System Switching",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF PROCESS SWAP IN/OUT",
+            "parameter": "swpin/s swpot/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF 512-BYTE UNITS TRANSFERRED FOR SWAP IN/OUT",
+            "parameter": "bswin/s bswot/s"
+          },
+          {
+            "id": "3",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "pswch/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rawch/s canch/s outch/s rcvin/s xmtin/s mdmin/s"
+          }
+        ]
+      }
+    },
+    "special": "d Mq Mu"
+  },
+  "hpux_11.23": {
+    "options": {
+      "a": {
+        "alias": "FileAccess",
+        "title": "Use of File Access Routines",
+        "data": [
+          {
+            "id": "1",
+            "title": "USE OF FILE ACCESS SYSTEM ROUTINES",
+            "parameter": "iget/s namei/s dirbk/s"
+          }
+        ]
+      },
+      "b": {
+        "alias": "BufferActivity",
+        "title": "Buffer Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "BUFFER ACTIVITY PART 1",
+            "parameter": "bread/s bwrit/s lread/s lwrit/s pread/s pwrit/s"
+          },
+          {
+            "id": "2",
+            "title": "BUFFER ACTIVITY PART 2",
+            "parameter": "%rcache %wcache"
+          }
+        ]
+      },
+      "c": {
+        "alias": "SystemCalls",
+        "title": "Statistics of System Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF CHARACTERS TRANSFERRED BY R/W SYSTEM CALLS",
+            "parameter": "rchar/s wchar/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SYSTEM CALLS",
+            "parameter": "scall/s"
+          },
+          {
+            "id": "3",
+            "title": "R/W FORK AND EXEC SYSTEM CALLS",
+            "parameter": "sread/s swrit/s fork/s exec/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "r+w/s blks/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "3",
+            "title": "SERVICE AND WAIT TIMEi",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "4",
+            "title": "BUSY TIME",
+            "parameter": "%busy"
+          }
+        ]
+      },
+      "Sm": {
+        "alias": "SystemVCalls",
+        "title": "Number of System V Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF SYSTEM V CALLS",
+            "parameter": "msg/s sema/s select/s"
+          }
+        ]
+      },
+      "Mq": {
+        "alias": "RunSwapQueue",
+        "title": "Run & Swap Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "RUN AND SWAP QUEUE",
+            "parameter": "runq-sz swpq-sz"
+          },
+          {
+            "id": "2",
+            "title": "RUN AND SWAP QUEUE %",
+            "parameter": "%runocc %swpocc"
+          }
+        ]
+      },
+      "Mu": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%usr %sys %wio %idle"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-sz inod-sz file-sz"
+          },
+          {
+            "id": "2",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-ov inod-ov file-ov"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SwapSystemSwitching",
+        "title": "Swap & System Switching",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF PROCESS SWAP IN/OUT",
+            "parameter": "swpin/s swpot/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF 512-BYTE UNITS TRANSFERRED FOR SWAP IN/OUT",
+            "parameter": "bswin/s bswot/s"
+          },
+          {
+            "id": "3",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "pswch/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rawch/s canch/s outch/s rcvin/s xmtin/s mdmin/s"
+          }
+        ]
+      }
+    },
+    "special": "d Mq Mu"
+  },
+  "hpux_11.31": {
+    "options": {
+      "a": {
+        "alias": "FileAccess",
+        "title": "Use of File Access Routines",
+        "data": [
+          {
+            "id": "1",
+            "title": "USE OF FILE ACCESS SYSTEM ROUTINES",
+            "parameter": "iget/s namei/s dirbk/s"
+          }
+        ]
+      },
+      "b": {
+        "alias": "BufferActivity",
+        "title": "Buffer Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "BUFFER ACTIVITY PART 1",
+            "parameter": "bread/s bwrit/s lread/s lwrit/s pread/s pwrit/s"
+          },
+          {
+            "id": "2",
+            "title": "BUFFER ACTIVITY PART 2",
+            "parameter": "%rcache %wcache"
+          }
+        ]
+      },
+      "c": {
+        "alias": "SystemCalls",
+        "title": "Statistics of System Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF CHARACTERS TRANSFERRED BY R/W SYSTEM CALLS",
+            "parameter": "rchar/s wchar/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SYSTEM CALLS",
+            "parameter": "scall/s"
+          },
+          {
+            "id": "3",
+            "title": "R/W FORK AND EXEC SYSTEM CALLS",
+            "parameter": "sread/s swrit/s fork/s exec/s"
+          }
+        ]
+      },
+      "Rd": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "r/s w/s blks/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "3",
+            "title": "SERVICE AND WAIT TIME",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "4",
+            "title": "BUSY TIME",
+            "parameter": "%busy"
+          }
+        ]
+      },
+      "H": {
+        "alias": "IOStatsUtilization",
+        "title": "I/O Statistics & Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF BYTES TRANSFERRED",
+            "parameter": "t-put read write"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF DATA TRANSFERS",
+            "parameter": "IO/s r/s w/s"
+          },
+          {
+            "id": "3",
+            "title": "AVERAGE NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "4",
+            "title": "AVERAGE WAIT AND SERVICE TIME",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "5",
+            "title": "UTILIZATION PERCENTAGE",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "L": {
+        "alias": "IOServiceStats",
+        "title": "I/O Service Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF READ AND WRITES",
+            "parameter": "r/s w/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF BYTES TRANSFERRED",
+            "parameter": "blks/s"
+          },
+          {
+            "id": "3",
+            "title": "SERVICE AND WAIT TIME",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "4",
+            "title": "AVERAGE NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "5",
+            "title": "BUSY TIME WHILE SERVICING",
+            "parameter": "%busy"
+          }
+        ]
+      },
+      "Sm": {
+        "alias": "SystemVCalls",
+        "title": "Number of System V Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF SYSTEM V CALLS",
+            "parameter": "msg/s sema/s select/s"
+          }
+        ]
+      },
+      "Mq": {
+        "alias": "RunSwapQueue",
+        "title": "Run & Swap Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "RUN AND SWAP QUEUE",
+            "parameter": "runq-sz swpq-sz"
+          },
+          {
+            "id": "2",
+            "title": "RUN AND SWAP QUEUE %",
+            "parameter": "%runocc %swpocc"
+          }
+        ]
+      },
+      "Mu": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%usr %sys %wio %idle"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-sz inod-sz file-sz"
+          },
+          {
+            "id": "2",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-ov inod-ov file-ov"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SwapSystemSwitching",
+        "title": "Swap & System Switching",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF PROCESS SWAP IN/OUT",
+            "parameter": "swpin/s swpot/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF 512-BYTE UNITS TRANSFERRED FOR SWAP IN/OUT",
+            "parameter": "bswin/s bswot/s"
+          },
+          {
+            "id": "3",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "pswch/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rawch/s canch/s outch/s rcvin/s xmtin/s mdmin/s"
+          }
+        ]
+      }
+    },
+    "special": "Rd H L Mq Mu"
+  },
+  "redhat_3": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          }
+        ]
+      },
+      "c": {
+        "alias": "ProcessCreation",
+        "title": "Process Creation Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxbyt/s txbyt/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %iowait %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY AND SWAP %",
+            "parameter": "%memused %swpused"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "USED FILE HANDLES",
+            "parameter": "file-sz"
+          },
+          {
+            "id": "3",
+            "title": "USED INODE HANDLERS",
+            "parameter": "inode-sz"
+          },
+          {
+            "id": "4",
+            "title": "SUPER BLOCK HANDLERS",
+            "parameter": "super-sz"
+          },
+          {
+            "id": "5",
+            "title": "ALLOCATED DISK QUOTA ENTRIES",
+            "parameter": "dquot-sz"
+          },
+          {
+            "id": "6",
+            "title": "QUEUED RT SIGNALS",
+            "parameter": "rtsig-sz"
+          },
+          {
+            "id": "7",
+            "title": "KERNEL TABLES %",
+            "parameter": "%super-sz %dquot-sz %rtsig-sz"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "redhat_4": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          }
+        ]
+      },
+      "c": {
+        "alias": "ProcessCreation",
+        "title": "Process Creation Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxbyt/s txbyt/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %iowait %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY AND SWAP %",
+            "parameter": "%memused %swpused"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "USED FILE HANDLES",
+            "parameter": "file-sz"
+          },
+          {
+            "id": "3",
+            "title": "USED INODE HANDLERS",
+            "parameter": "inode-sz"
+          },
+          {
+            "id": "4",
+            "title": "SUPER BLOCK HANDLERS",
+            "parameter": "super-sz"
+          },
+          {
+            "id": "5",
+            "title": "ALLOCATED DISK QUOTA ENTRIES",
+            "parameter": "dquot-sz"
+          },
+          {
+            "id": "6",
+            "title": "QUEUED RT SIGNALS",
+            "parameter": "rtsig-sz"
+          },
+          {
+            "id": "7",
+            "title": "KERNEL TABLES %",
+            "parameter": "%super-sz %dquot-sz %rtsig-sz"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "redhat_5": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          }
+        ]
+      },
+      "c": {
+        "alias": "ProcessCreation",
+        "title": "Process Creation Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O REQUESTS AND QUEUE LENGHT",
+            "parameter": "avgrq-sz avgqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxbyt/s txbyt/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %iowait %steal %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY AND SWAP %",
+            "parameter": "%memused %swpused"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "USED FILE HANDLES",
+            "parameter": "file-sz"
+          },
+          {
+            "id": "3",
+            "title": "USED INODE HANDLERS",
+            "parameter": "inode-sz"
+          },
+          {
+            "id": "4",
+            "title": "SUPER BLOCK HANDLERS",
+            "parameter": "super-sz"
+          },
+          {
+            "id": "5",
+            "title": "ALLOCATED DISK QUOTA ENTRIES",
+            "parameter": "dquot-sz"
+          },
+          {
+            "id": "6",
+            "title": "QUEUED RT SIGNALS",
+            "parameter": "rtsig-sz"
+          },
+          {
+            "id": "7",
+            "title": "KERNEL TABLES %",
+            "parameter": "%super-sz %dquot-sz %rtsig-sz"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "redhat_6": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE OPERATIONS",
+            "parameter": "pgfree/s pgscank/s pgscand/s pgsteal/s"
+          },
+          {
+            "id": "4",
+            "title": "EFFICIENCY OF PAGE RECLAIM",
+            "parameter": "%vmeff"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O REQUESTS AND QUEUE LENGHT",
+            "parameter": "avgrq-sz avgqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxkB/s txkB/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag tcp-tw"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %iowait %steal %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached kbcommit"
+          },
+          {
+            "id": "2",
+            "title": "MEMORY UTILIZATION %",
+            "parameter": "%memused %commit"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "S": {
+        "alias": "SwapUtils",
+        "title": "Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION %",
+            "parameter": "%swpused %swpcad"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF FILE AND INODE HANDLERS",
+            "parameter": "file-nr inode-nr"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF PSEUDO-TERMINALS",
+            "parameter": "pty-nr"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          },
+          {
+            "id": "2",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "redhat_7": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE OPERATIONS",
+            "parameter": "pgfree/s pgscank/s pgscand/s pgsteal/s"
+          },
+          {
+            "id": "4",
+            "title": "EFFICIENCY OF PAGE RECLAIM",
+            "parameter": "%vmeff"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O REQUESTS AND QUEUE LENGHT",
+            "parameter": "avgrq-sz avgqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "H": {
+        "alias": "HugepageUtils",
+        "title": "Hugepage Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "HUGEPAGE UTILIZATION",
+            "parameter": "kbhugfree kbhugused"
+          },
+          {
+            "id": "2",
+            "title": "HUGEPAGE UTILIZATION %",
+            "parameter": "%hugused"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxkB/s txkB/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag tcp-tw"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %sys %idle"
+          },
+          {
+            "id": "2",
+            "title": "PROCESSOR ACTIVITY DETAILS",
+            "parameter": "%nice %iowait %steal %irq %soft %guest %gnice"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF BLOCKED PROCESSES",
+            "parameter": "blocked"
+          },
+          {
+            "id": "4",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached kbcommit"
+          },
+          {
+            "id": "2",
+            "title": "MEMORY UTILIZATION DETAILS",
+            "parameter": "kbactive kbinact kbdirty"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY UTILIZATION %",
+            "parameter": "%memused %commit"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "S": {
+        "alias": "SwapUtils",
+        "title": "Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION %",
+            "parameter": "%swpused %swpcad"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF FILE AND INODE HANDLERS",
+            "parameter": "file-nr inode-nr"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF PSEUDO-TERMINALS",
+            "parameter": "pty-nr"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          },
+          {
+            "id": "2",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "sunos_9": {
+    "options": {
+      "a": {
+        "alias": "FileAccess",
+        "title": "Use of File Access Routines",
+        "data": [
+          {
+            "id": "1",
+            "title": "USE OF FILE ACCESS SYSTEM ROUTINES",
+            "parameter": "iget/s namei/s dirbk/s"
+          }
+        ]
+      },
+      "b": {
+        "alias": "BufferActivity",
+        "title": "Buffer Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "BUFFER ACTIVITY PART 1",
+            "parameter": "bread/s bwrit/s lread/s lwrit/s pread/s pwrit/s"
+          },
+          {
+            "id": "2",
+            "title": "BUFFER ACTIVITY PART 2",
+            "parameter": "%rcache %wcache"
+          }
+        ]
+      },
+      "c": {
+        "alias": "SystemCalls",
+        "title": "Statistics of System Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF CHARACTERS TRANSFERRED BY R/W SYSTEM CALLS",
+            "parameter": "rchar/s wchar/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SYSTEM CALLS",
+            "parameter": "scall/s"
+          },
+          {
+            "id": "3",
+            "title": "R/W FORK AND EXEC SYSTEM CALLS",
+            "parameter": "sread/s swrit/s fork/s exec/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "r+w/s blks/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "3",
+            "title": "SERVICE AND WAIT TIMEi",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "4",
+            "title": "BUSY TIME",
+            "parameter": "%busy"
+          }
+        ]
+      },
+      "g": {
+        "alias": "PagingStats",
+        "title": "Paging Activities",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING ACTIVITIES",
+            "parameter": "pgout/s ppgout/s pgfree/s pgscan/s"
+          },
+          {
+            "id": "2",
+            "title": "THE PERCENTAGE OF UFS INODES",
+            "parameter": "%ufs_ipf"
+          }
+        ]
+      },
+      "k": {
+        "alias": "KernelMemory",
+        "title": "Kernel Memory Allocation",
+        "data": [
+          {
+            "id": "1",
+            "title": "KERNEL MEMORY ALLOCATION ACTIVITIES",
+            "parameter": "sml_mem alloc fail"
+          },
+          {
+            "id": "2",
+            "title": "KMA FOR LARGE MEMORY POOL",
+            "parameter": "lg_mem alloc fail"
+          },
+          {
+            "id": "3",
+            "title": "KMA FOR OVERSIZE REQUESTS",
+            "parameter": "ovsz_alloc fail"
+          }
+        ]
+      },
+      "m": {
+        "alias": "SystemVCalls",
+        "title": "Number of System V Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF SYSTEM V CALLS",
+            "parameter": "msg/s sema/s"
+          }
+        ]
+      },
+      "p": {
+        "alias": "PageStats",
+        "title": "Page Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGE-IN REQUESTS",
+            "parameter": "pgin/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGES PAGED-IN",
+            "parameter": "ppgin/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE FAULTS",
+            "parameter": "atch/s pflt/s vflt/s slock/s"
+          }
+        ]
+      },
+      "q": {
+        "alias": "RunSwapQueue",
+        "title": "Run & Swap Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "RUN AND SWAP QUEUE",
+            "parameter": "runq-sz swpq-sz"
+          },
+          {
+            "id": "2",
+            "title": "RUN AND SWAP QUEUE %",
+            "parameter": "%runocc %swpocc"
+          }
+        ]
+      },
+      "u": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%usr %sys %wio %idle"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-sz inod-sz file-sz lock-sz"
+          },
+          {
+            "id": "2",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-ov inod-ov file-ov"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SwapSystemSwitching",
+        "title": "Swap & System Switching",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF PROCESS SWAP IN/OUT",
+            "parameter": "swpin/s swpot/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF 512-BYTE UNITS TRANSFERRED FOR SWAP IN/OUT",
+            "parameter": "bswin/s bswot/s"
+          },
+          {
+            "id": "3",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "pswch/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rawch/s canch/s outch/s rcvin/s xmtin/s mdmin/s"
+          }
+        ]
+      }
+    },
+    "special": "d"
+  },
+  "sunos_10": {
+    "options": {
+      "a": {
+        "alias": "FileAccess",
+        "title": "Use of File Access Routines",
+        "data": [
+          {
+            "id": "1",
+            "title": "USE OF FILE ACCESS SYSTEM ROUTINES",
+            "parameter": "iget/s namei/s dirbk/s"
+          }
+        ]
+      },
+      "b": {
+        "alias": "BufferActivity",
+        "title": "Buffer Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "BUFFER ACTIVITY PART 1",
+            "parameter": "bread/s bwrit/s lread/s lwrit/s pread/s pwrit/s"
+          },
+          {
+            "id": "2",
+            "title": "BUFFER ACTIVITY PART 2",
+            "parameter": "%rcache %wcache"
+          }
+        ]
+      },
+      "c": {
+        "alias": "SystemCalls",
+        "title": "Statistics of System Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF CHARACTERS TRANSFERRED BY R/W SYSTEM CALLS",
+            "parameter": "rchar/s wchar/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SYSTEM CALLS",
+            "parameter": "scall/s"
+          },
+          {
+            "id": "3",
+            "title": "R/W FORK AND EXEC SYSTEM CALLS",
+            "parameter": "sread/s swrit/s fork/s exec/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "r+w/s blks/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "3",
+            "title": "SERVICE AND WAIT TIMEi",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "4",
+            "title": "BUSY TIME",
+            "parameter": "%busy"
+          }
+        ]
+      },
+      "g": {
+        "alias": "PagingStats",
+        "title": "Paging Activities",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING ACTIVITIES",
+            "parameter": "pgout/s ppgout/s pgfree/s pgscan/s"
+          },
+          {
+            "id": "2",
+            "title": "THE PERCENTAGE OF UFS INODES",
+            "parameter": "%ufs_ipf"
+          }
+        ]
+      },
+      "k": {
+        "alias": "KernelMemory",
+        "title": "Kernel Memory Allocation",
+        "data": [
+          {
+            "id": "1",
+            "title": "KERNEL MEMORY ALLOCATION ACTIVITIES",
+            "parameter": "sml_mem alloc fail"
+          },
+          {
+            "id": "2",
+            "title": "KMA FOR LARGE MEMORY POOL",
+            "parameter": "lg_mem alloc fail"
+          },
+          {
+            "id": "3",
+            "title": "KMA FOR OVERSIZE REQUESTS",
+            "parameter": "ovsz_alloc fail"
+          }
+        ]
+      },
+      "m": {
+        "alias": "SystemVCalls",
+        "title": "Number of System V Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF SYSTEM V CALLS",
+            "parameter": "msg/s sema/s"
+          }
+        ]
+      },
+      "p": {
+        "alias": "PageStats",
+        "title": "Page Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGE-IN REQUESTS",
+            "parameter": "pgin/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGES PAGED-IN",
+            "parameter": "ppgin/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE FAULTS",
+            "parameter": "atch/s pflt/s vflt/s slock/s"
+          }
+        ]
+      },
+      "q": {
+        "alias": "RunSwapQueue",
+        "title": "Run & Swap Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "RUN AND SWAP QUEUE",
+            "parameter": "runq-sz swpq-sz"
+          },
+          {
+            "id": "2",
+            "title": "RUN AND SWAP QUEUE %",
+            "parameter": "%runocc %swpocc"
+          }
+        ]
+      },
+      "r": {
+        "alias": "UnusedMemorySwap",
+        "title": "Unused Memory & Swap",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED MEMORY AND SWAP",
+            "parameter": "freemem freeswap"
+          }
+        ]
+      },
+      "u": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%usr %sys %wio %idle"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-sz inod-sz file-sz lock-sz"
+          },
+          {
+            "id": "2",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-ov inod-ov file-ov"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SwapSystemSwitching",
+        "title": "Swap & System Switching",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF PROCESS SWAP IN/OUT",
+            "parameter": "swpin/s swpot/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF 512-BYTE UNITS TRANSFERRED FOR SWAP IN/OUT",
+            "parameter": "bswin/s bswot/s"
+          },
+          {
+            "id": "3",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "pswch/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rawch/s canch/s outch/s rcvin/s xmtin/s mdmin/s"
+          }
+        ]
+      }
+    },
+    "special": "d"
+  },
+  "sunos_11": {
+    "options": {
+      "a": {
+        "alias": "FileAccess",
+        "title": "Use of File Access Routines",
+        "data": [
+          {
+            "id": "1",
+            "title": "USE OF FILE ACCESS SYSTEM ROUTINES",
+            "parameter": "iget/s namei/s dirbk/s"
+          }
+        ]
+      },
+      "b": {
+        "alias": "BufferActivity",
+        "title": "Buffer Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "BUFFER ACTIVITY PART 1",
+            "parameter": "bread/s bwrit/s lread/s lwrit/s pread/s pwrit/s"
+          },
+          {
+            "id": "2",
+            "title": "BUFFER ACTIVITY PART 2",
+            "parameter": "%rcache %wcache"
+          }
+        ]
+      },
+      "c": {
+        "alias": "SystemCalls",
+        "title": "Statistics of System Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF CHARACTERS TRANSFERRED BY R/W SYSTEM CALLS",
+            "parameter": "rchar/s wchar/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SYSTEM CALLS",
+            "parameter": "scall/s"
+          },
+          {
+            "id": "3",
+            "title": "R/W FORK AND EXEC SYSTEM CALLS",
+            "parameter": "sread/s swrit/s fork/s exec/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "r+w/s blks/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF REQUESTS",
+            "parameter": "avque"
+          },
+          {
+            "id": "3",
+            "title": "SERVICE AND WAIT TIMEi",
+            "parameter": "avwait avserv"
+          },
+          {
+            "id": "4",
+            "title": "BUSY TIME",
+            "parameter": "%busy"
+          }
+        ]
+      },
+      "g": {
+        "alias": "PagingStats",
+        "title": "Paging Activities",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING ACTIVITIES",
+            "parameter": "pgout/s ppgout/s pgfree/s pgscan/s"
+          },
+          {
+            "id": "2",
+            "title": "THE PERCENTAGE OF UFS INODES",
+            "parameter": "%ufs_ipf"
+          }
+        ]
+      },
+      "k": {
+        "alias": "KernelMemory",
+        "title": "Kernel Memory Allocation",
+        "data": [
+          {
+            "id": "1",
+            "title": "KERNEL MEMORY ALLOCATION ACTIVITIES",
+            "parameter": "sml_mem alloc fail"
+          },
+          {
+            "id": "2",
+            "title": "KMA FOR LARGE MEMORY POOL",
+            "parameter": "lg_mem alloc fail"
+          },
+          {
+            "id": "3",
+            "title": "KMA FOR OVERSIZE REQUESTS",
+            "parameter": "ovsz_alloc fail"
+          }
+        ]
+      },
+      "m": {
+        "alias": "SystemVCalls",
+        "title": "Number of System V Calls",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF SYSTEM V CALLS",
+            "parameter": "msg/s sema/s"
+          }
+        ]
+      },
+      "p": {
+        "alias": "PageStats",
+        "title": "Page Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGE-IN REQUESTS",
+            "parameter": "pgin/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGES PAGED-IN",
+            "parameter": "ppgin/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE FAULTS",
+            "parameter": "atch/s pflt/s vflt/s slock/s"
+          }
+        ]
+      },
+      "q": {
+        "alias": "RunSwapQueue",
+        "title": "Run & Swap Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "RUN AND SWAP QUEUE",
+            "parameter": "runq-sz swpq-sz"
+          },
+          {
+            "id": "2",
+            "title": "RUN AND SWAP QUEUE %",
+            "parameter": "%runocc %swpocc"
+          }
+        ]
+      },
+      "r": {
+        "alias": "UnusedMemorySwap",
+        "title": "Unused Memory & Swap",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED MEMORY AND SWAP",
+            "parameter": "freemem freeswap"
+          }
+        ]
+      },
+      "u": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%usr %sys %wio %idle"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-sz inod-sz file-sz lock-sz"
+          },
+          {
+            "id": "2",
+            "title": "STATUS OF PROCESS",
+            "parameter": "proc-ov inod-ov file-ov"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SwapSystemSwitching",
+        "title": "Swap & System Switching",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF PROCESS SWAP IN/OUT",
+            "parameter": "swpin/s swpot/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF 512-BYTE UNITS TRANSFERRED FOR SWAP IN/OUT",
+            "parameter": "bswin/s bswot/s"
+          },
+          {
+            "id": "3",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "pswch/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rawch/s canch/s outch/s rcvin/s xmtin/s mdmin/s"
+          }
+        ]
+      }
+    },
+    "special": "d"
+  },
+  "suse_8": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE STATISTICS",
+            "parameter": "activepg inadtypg inaclnpg inatarpg"
+          }
+        ]
+      },
+      "c": {
+        "alias": "ProcessCreation",
+        "title": "Process Creation Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF TRANSFERRED BLOCKS",
+            "parameter": "blks/s"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxbyt/s txbyt/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag"
+          }
+        ]
+      },
+      "U_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbmemshrd kbbuffers kbcached"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY AND SWAP %",
+            "parameter": "%memused %swpused"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s shmpg/s campg/s"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "USED FILE HANDLES",
+            "parameter": "file-sz"
+          },
+          {
+            "id": "3",
+            "title": "USED INODE HANDLERS",
+            "parameter": "inode-sz"
+          },
+          {
+            "id": "4",
+            "title": "SUPER BLOCK HANDLERS",
+            "parameter": "super-sz"
+          },
+          {
+            "id": "5",
+            "title": "ALLOCATED DISK QUOTA ENTRIES",
+            "parameter": "dquot-sz"
+          },
+          {
+            "id": "6",
+            "title": "QUEUED RT SIGNALS",
+            "parameter": "rtsig-sz"
+          },
+          {
+            "id": "7",
+            "title": "KERNEL TABLES %",
+            "parameter": "%file-sz %super-sz %dquot-sz %rtsig-sz"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV U_ALL"
+  },
+  "suse_9": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          }
+        ]
+      },
+      "c": {
+        "alias": "ProcessCreation",
+        "title": "Process Creation Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxbyt/s txbyt/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %iowait %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY AND SWAP %",
+            "parameter": "%memused %swpused"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "USED FILE HANDLES",
+            "parameter": "file-sz"
+          },
+          {
+            "id": "3",
+            "title": "USED INODE HANDLERS",
+            "parameter": "inode-sz"
+          },
+          {
+            "id": "4",
+            "title": "SUPER BLOCK HANDLERS",
+            "parameter": "super-sz"
+          },
+          {
+            "id": "5",
+            "title": "ALLOCATED DISK QUOTA ENTRIES",
+            "parameter": "dquot-sz"
+          },
+          {
+            "id": "6",
+            "title": "QUEUED RT SIGNALS",
+            "parameter": "rtsig-sz"
+          },
+          {
+            "id": "7",
+            "title": "KERNEL TABLES %",
+            "parameter": "%super-sz %dquot-sz %rtsig-sz"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "suse_10": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE OPERATIONS",
+            "parameter": "pgfree/s pgscank/s pgscand/s pgsteal/s"
+          },
+          {
+            "id": "4",
+            "title": "EFFICIENCY OF PAGE RECLAIM",
+            "parameter": "%vmeff"
+          }
+        ]
+      },
+      "c": {
+        "alias": "ProcessCreation",
+        "title": "Process Creation Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O REQUESTS AND QUEUE LENGHT",
+            "parameter": "avgrq-sz avgqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxkB/s txkB/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag tcp-tw"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %iowait %steal %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY AND SWAP %",
+            "parameter": "%memused %swpused"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF FILE AND INODE HANDLERS",
+            "parameter": "file-nr inode-nr"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF PSEUDO-TERMINALS",
+            "parameter": "pty-nr"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "suse_11": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE OPERATIONS",
+            "parameter": "pgfree/s pgscank/s pgscand/s pgsteal/s"
+          },
+          {
+            "id": "4",
+            "title": "EFFICIENCY OF PAGE RECLAIM",
+            "parameter": "%vmeff"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O REQUESTS AND QUEUE LENGHT",
+            "parameter": "avgrq-sz avgqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "I_SUM": {
+        "alias": "Interrupts",
+        "title": "Interrupt Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "INTERRUPT ACTIVITY",
+            "parameter": "intr/s"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxkB/s txkB/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag tcp-tw"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %nice %system %iowait %steal %idle"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached kbcommit"
+          },
+          {
+            "id": "2",
+            "title": "MEMORY UTILIZATION %",
+            "parameter": "%memused %commit"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "S": {
+        "alias": "SwapUtils",
+        "title": "Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION %",
+            "parameter": "%swpused %swpcad"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF FILE AND INODE HANDLERS",
+            "parameter": "file-nr inode-nr"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF PSEUDO-TERMINALS",
+            "parameter": "pty-nr"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          },
+          {
+            "id": "2",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "suse_12": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE OPERATIONS",
+            "parameter": "pgfree/s pgscank/s pgscand/s pgsteal/s"
+          },
+          {
+            "id": "4",
+            "title": "EFFICIENCY OF PAGE RECLAIM",
+            "parameter": "%vmeff"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF SECTOR r/w",
+            "parameter": "rd_sec/s wr_sec/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O REQUESTS AND QUEUE LENGHT",
+            "parameter": "avgrq-sz avgqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "H": {
+        "alias": "HugepageUtils",
+        "title": "Hugepage Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "HUGEPAGE UTILIZATION",
+            "parameter": "kbhugfree kbhugused"
+          },
+          {
+            "id": "2",
+            "title": "HUGEPAGE UTILIZATION %",
+            "parameter": "%hugused"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxkB/s txkB/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          },
+          {
+            "id": "3",
+            "title": "NETWORK UTILIZATION %",
+            "parameter": "%ifutil"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag tcp-tw"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %sys %idle"
+          },
+          {
+            "id": "2",
+            "title": "PROCESSOR ACTIVITY DETAILS",
+            "parameter": "%nice %iowait %steal %irq %soft %guest %gnice"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF BLOCKED PROCESSES",
+            "parameter": "blocked"
+          },
+          {
+            "id": "4",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbmemused kbbuffers kbcached kbcommit"
+          },
+          {
+            "id": "2",
+            "title": "MEMORY UTILIZATION DETAILS",
+            "parameter": "kbactive kbinact kbdirty"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY UTILIZATION %",
+            "parameter": "%memused %commit"
+          }
+        ]
+      },
+      "R": {
+        "alias": "MemoryStats",
+        "title": "Memory Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY STATISTICS",
+            "parameter": "frmpg/s bufpg/s campg/s"
+          }
+        ]
+      },
+      "S": {
+        "alias": "SwapUtils",
+        "title": "Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION %",
+            "parameter": "%swpused %swpcad"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF FILE AND INODE HANDLERS",
+            "parameter": "file-nr inode-nr"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF PSEUDO-TERMINALS",
+            "parameter": "pty-nr"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          },
+          {
+            "id": "2",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s xmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL"
+  },
+  "ubuntu_18": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE OPERATIONS",
+            "parameter": "pgfree/s pgscank/s pgscand/s pgsteal/s"
+          },
+          {
+            "id": "4",
+            "title": "EFFICIENCY OF PAGE RECLAIM",
+            "parameter": "%vmeff"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF KB TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF KB r/w",
+            "parameter": "rkB/s wkB/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O AVERAGE SIZE(KB) AND QUEUE LENGHT OF I/O REQUESTS",
+            "parameter": "areq-sz aqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "AVERAGE SERVICE TIME",
+            "parameter": "svctm"
+          },
+          {
+            "id": "6",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "H": {
+        "alias": "HugepageUtils",
+        "title": "Hugepage Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "HUGEPAGE UTILIZATION",
+            "parameter": "kbhugfree kbhugused"
+          },
+          {
+            "id": "2",
+            "title": "HUGEPAGE UTILIZATION %",
+            "parameter": "%hugused"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxkB/s txkB/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          },
+          {
+            "id": "3",
+            "title": "UTILIZATION (%)",
+            "parameter": "%ifutil"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag tcp-tw"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %system %idle"
+          },
+          {
+            "id": "2",
+            "title": "PROCESSOR ACTIVITY DETAILS",
+            "parameter": "%nice %iowait %steal"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF BLOCKED PROCESSES",
+            "parameter": "blocked"
+          },
+          {
+            "id": "4",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbavail kbmemused kbbuffers kbcached kbcommit"
+          },
+          {
+            "id": "2",
+            "title": "MEMORY UTILIZATION DETAILS",
+            "parameter": "kbactive kbinact kbdirty"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY UTILIZATION %",
+            "parameter": "%memused %commit"
+          }
+        ]
+      },
+      "S": {
+        "alias": "SwapUtils",
+        "title": "Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION %",
+            "parameter": "%swpused %swpcad"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF FILE AND INODE HANDLERS",
+            "parameter": "file-nr inode-nr"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF PSEUDO-TERMINALS",
+            "parameter": "pty-nr"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          },
+          {
+            "id": "2",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s txmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL y"
+  },
+  "ubuntu_20": {
+    "options": {
+      "b": {
+        "alias": "IORates",
+        "title": "I/O Rates",
+        "data": [
+          {
+            "id": "1",
+            "title": "I/O TRANSACTION",
+            "parameter": "tps rtps wtps dtps"
+          },
+          {
+            "id": "2",
+            "title": "I/O TRANSFER RATE",
+            "parameter": "bread/s bwrtn/s bdscd/s"
+          }
+        ]
+      },
+      "B": {
+        "alias": "PagingStats",
+        "title": "Paging Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "PAGING STATISTICS",
+            "parameter": "pgpgin/s pgpgout/s"
+          },
+          {
+            "id": "2",
+            "title": "PAGE FAULTS",
+            "parameter": "fault/s majflt/s"
+          },
+          {
+            "id": "3",
+            "title": "PAGE OPERATIONS",
+            "parameter": "pgfree/s pgscank/s pgscand/s pgsteal/s"
+          },
+          {
+            "id": "4",
+            "title": "EFFICIENCY OF PAGE RECLAIM",
+            "parameter": "%vmeff"
+          }
+        ]
+      },
+      "d": {
+        "alias": "IOStats",
+        "title": "Disk I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF KB TRANSFERS",
+            "parameter": "tps"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF KB r/w/d",
+            "parameter": "rkB/s wkB/s dkB/s"
+          },
+          {
+            "id": "3",
+            "title": "I/O AVERAGE SIZE(KB) AND QUEUE LENGHT OF I/O REQUESTS",
+            "parameter": "areq-sz aqu-sz"
+          },
+          {
+            "id": "4",
+            "title": "AVEARGE WAIT TIME",
+            "parameter": "await"
+          },
+          {
+            "id": "5",
+            "title": "CPU PERCENTAGE of I/O",
+            "parameter": "%util"
+          }
+        ]
+      },
+      "H": {
+        "alias": "HugepageUtils",
+        "title": "Hugepage Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "HUGEPAGE UTILIZATION",
+            "parameter": "kbhugfree kbhugused kbhugrsvd kbhugsurp"
+          },
+          {
+            "id": "2",
+            "title": "HUGEPAGE UTILIZATION %",
+            "parameter": "%hugused"
+          }
+        ]
+      },
+      "n_DEV": {
+        "alias": "NetworkIOStats",
+        "title": "Network I/O & Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK I/O",
+            "parameter": "rxkB/s txkB/s"
+          },
+          {
+            "id": "2",
+            "title": "NETWORK STATISTICS",
+            "parameter": "rxpck/s txpck/s rxcmp/s txcmp/s rxmcst/s"
+          },
+          {
+            "id": "3",
+            "title": "UTILIZATION (%)",
+            "parameter": "%ifutil"
+          }
+        ]
+      },
+      "n_EDEV": {
+        "alias": "NetworkErrorStats",
+        "title": "Network Error Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK ERROR STATISTICS",
+            "parameter": "rxerr/s txerr/s coll/s rxdrop/s txdrop/s txcarr/s rxfram/s rxfifo/s txfifo/s"
+          }
+        ]
+      },
+      "n_NFS": {
+        "alias": "NFSStats",
+        "title": "NFS Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "read/s write/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "call/s retrans/s access/s getatt/s"
+          }
+        ]
+      },
+      "n_NFSD": {
+        "alias": "NFSDStats",
+        "title": "NFSD Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NUMBER OF RPC R/W",
+            "parameter": "sread/s swrite/s"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF RPC REQUESTS AND ACCESSES",
+            "parameter": "scall/s badcall/s saccess/s sgetatt/s"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF NETWORK PACKETS",
+            "parameter": "packet/s udp/s tcp/s"
+          },
+          {
+            "id": "4",
+            "title": "NUMBER OF REPLY CACHE HITS AND MISSES",
+            "parameter": "hit/s miss/s"
+          }
+        ]
+      },
+      "n_SOCK": {
+        "alias": "NetworkSocketStats",
+        "title": "Network Socket Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "NETWORK SOCKET STATISTICS",
+            "parameter": "totsck tcpsck udpsck rawsck ip-frag tcp-tw"
+          }
+        ]
+      },
+      "P_ALL": {
+        "alias": "ProcessorActivity",
+        "title": "Processor Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESSOR ACTIVITY",
+            "parameter": "%user %system %idle"
+          },
+          {
+            "id": "2",
+            "title": "PROCESSOR ACTIVITY DETAILS",
+            "parameter": "%nice %iowait %steal"
+          }
+        ]
+      },
+      "q": {
+        "alias": "ProcessQueue",
+        "title": "Process Queue",
+        "data": [
+          {
+            "id": "1",
+            "title": "QUEUE LENGTH",
+            "parameter": "runq-sz"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF PROCESSES",
+            "parameter": "plist-sz"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF BLOCKED PROCESSES",
+            "parameter": "blocked"
+          },
+          {
+            "id": "4",
+            "title": "LOAD AVERAGE",
+            "parameter": "ldavg-1 ldavg-5 ldavg-15"
+          }
+        ]
+      },
+      "r": {
+        "alias": "MemorySwapUtils",
+        "title": "Memory & Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "MEMORY UTILIZATION",
+            "parameter": "kbmemfree kbavail kbmemused kbbuffers kbcached kbcommit"
+          },
+          {
+            "id": "2",
+            "title": "MEMORY UTILIZATION DETAILS",
+            "parameter": "kbactive kbinact kbdirty"
+          },
+          {
+            "id": "3",
+            "title": "MEMORY UTILIZATION %",
+            "parameter": "%memused %commit"
+          }
+        ]
+      },
+      "S": {
+        "alias": "SwapUtils",
+        "title": "Swap Utilization",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAP UTILIZATION",
+            "parameter": "kbswpfree kbswpused kbswpcad"
+          },
+          {
+            "id": "2",
+            "title": "SWAP UTILIZATION %",
+            "parameter": "%swpused %swpcad"
+          }
+        ]
+      },
+      "v": {
+        "alias": "KernelTables",
+        "title": "Kernel Tables",
+        "data": [
+          {
+            "id": "1",
+            "title": "UNUSED CACHE ENTRIES",
+            "parameter": "dentunusd"
+          },
+          {
+            "id": "2",
+            "title": "NUMBER OF FILE AND INODE HANDLERS",
+            "parameter": "file-nr inode-nr"
+          },
+          {
+            "id": "3",
+            "title": "NUMBER OF PSEUDO-TERMINALS",
+            "parameter": "pty-nr"
+          }
+        ]
+      },
+      "w": {
+        "alias": "SystemSwitching",
+        "title": "System Switching Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "PROCESS CREATION ACTIVITY",
+            "parameter": "proc/s"
+          },
+          {
+            "id": "2",
+            "title": "SYSTEM SWITCHING ACTIVITY",
+            "parameter": "cswch/s"
+          }
+        ]
+      },
+      "W": {
+        "alias": "SwapStats",
+        "title": "Swapping Statistics",
+        "data": [
+          {
+            "id": "1",
+            "title": "SWAPPING STATISTICS",
+            "parameter": "pswpin/s pswpout/s"
+          }
+        ]
+      },
+      "y": {
+        "alias": "TTYDevice",
+        "title": "TTY Device Activity",
+        "data": [
+          {
+            "id": "1",
+            "title": "TTY DEVICE ACTIVITY",
+            "parameter": "rcvin/s txmtin/s framerr/s prtyerr/s brk/s ovrun/s"
+          }
+        ]
+      }
+    },
+    "special": "d n_DEV n_EDEV P_ALL y"
+  }
+}

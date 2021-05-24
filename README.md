@@ -1,97 +1,105 @@
-# SAR2HTML 3.2.2
-Plotting tools, sar2html and index.php only run on Linux server. HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18, 20 and Solaris 5.9, 5.10, 5.11 are supported for reporting.
+# sar2html 4.0.0
+
+Plotting tools for system stats (sar data).
+HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18, 20 and Solaris 5.9, 5.10, 5.11 are supported.
 
 ## RUNNING THE DOCKER IMAGE 
 ### ON DOCKER
 If you want your performance data to be persistent you need to create directory for them in your host: 
 ```bash
-mkdir /var/sarDATA
-docker run -p 80:80 -v /tmp/data:/var/www/html/sarDATA -h sar2html.localdomain cemtan/sar2html:v3.2.2 
+mkdir /data
+docker run -p 5000:5000 -v /data:/sar2html/data -d -h sar2html.localdomain cemtan/sar2html:4.0.0
 ```
 Otherwise you may directly run the image:
 ```bash
-docker run -p 80:80 -h sar2html.localdomain cemtan/sar2html:v3.2.2 
+docker run -p 5000:5000 -h sar2html.localdomain cemtan/sar2html:4.0.0
 ```
+
 ### ON KUBERNETES
 - Simply run
 ```bash
-kubectl run sar2html --image=cemtan/sar2html:v3.2.2 --port=80 --expose
+kubectl run sar2html --image=cemtan/sar2html:4.0.0 --port=5000 --expose
 ```
 - Or download repository and enter the directory
 ```bash
 git clone https://github.com/cemtan/sar2html.git
-cd sar2html/config/kubernetes
+cd sar2html/conf/kubernetes
 ```
 - Deploy docker image
- - If you want your performance data to be persistent you need to create directory for them in your host:
-```bash
-kubectl apply -f sar2html-pvc.yaml
-kubectl apply -f sar2html-deploy-persistent.yaml
-```
- - Otherwise you may directly run the image:
-```bash
-kubectl apply -f sar2html-deploy-ephemeral.yaml
-```
-- Expose your pod. 
- - For local installation of kubernetes (like minikube, microk8s...):
-```bash
-kubectl apply -f sar2html-service-nodeport.yaml
-```
- - For kubernetes which is able to use loadbalancer:
-```bash
-kubectl apply -f sar2html-service-loadbalancer.yaml
-```
+  - If you want your performance data to be persistent you need to create directory for them in your host:
+    ```bash
+    kubectl apply -f sar2html-pvc.yaml
+    kubectl apply -f sar2html-deploy-persistent.yaml
+    ```
+  - Otherwise you may directly run the image:
+    ```bash
+    kubectl apply -f sar2html-deploy-ephemeral.yaml
+    ```
+  - Expose your pod. 
+  - For local installation of kubernetes (like minikube, microk8s...):
+    ```bash
+            kubectl apply -f sar2html-service-nodeport.yaml
+    ```
+  - For kubernetes which is able to use loadbalancer:
+    ```bash
+            kubectl apply -f sar2html-service-loadbalancer.yaml
+    ```
 
 ### ON OPENSHIFT CONTAINER PLATFORM
-Download template file of sar2html from git repository
+- Download repository and enter the directory
 ```bash
-wget https://github.com/cemtan/sar2html/blob/master/config/ocp/sar2html.yaml
+git clone https://github.com/cemtan/sar2html.git
+cd sar2html/conf/ocp
 ```
-On master node create template from the sar2html.yaml
+- On master node create template from the sar2html.yaml
 ```bash
 oc create -f sar2html.yaml 
 ```
 Now you may search for "SAR Database and Plotter" in Service Catalog and you may deploy sar2html through web-console.
+
 ## CREATING THE DOCKER IMAGE
 - Download repository and enter the directory
 ```bash
 git clone https://github.com/cemtan/sar2html.git
-cd sar2html/www
+cd sar2html
 ```
-- If you are behind proxy edit 3 lines regarding proxy in bin/webserver/Dockerile
+- If you are behind proxy edit 3 lines regarding proxy in dockerile
 ```bash
 ENV http_proxy <YOUR HTTP PROXY>
 ENV https_proxy <YOUR HTTPS PROXY>
 RUN pear config-set http_proxy <YOUR HTTP PROXY>
 ```
-- Build the image by docker-compose and run the container
+- If you want to build tour own image, clone repository or download source code and extract it:
 ```bash
-cd sar2html
-docker build -t sar2html:v3.2.2 .
+sudo docker build --tag sar2html:4.0.0
 ```
 
 ## INSTALLATION ON PHYSICAL OR VIRTUAL MACHINE
 -------------------
-Apache2, php5, sar, gnuplot v4.0+, libpng, gawk, grep, sed, libpng-devel v1.2.7+, coreutils, expect, php5-openssl must be installed
-- Edit php.ini file and set:
+- Install 
+  - python3
+  - python3-dev
+  - gcc
+  - libc-dev
+- Download repository and enter the repository
 ```bash
-upload_max_filesize=2GB
-post_max_size=80MB
+git clone https://github.com/cemtan/sar2html.git
+cd sar2html
 ```
-- Download sar2html from https://sourceforge.net/projects/sar2html/files/sar2html-3.2.2.tar.gz/download
-- Extract sar2html.tar.gz under root directory of your web server or create subdirectory for it.
-- Configure sar2html. You need to know apache user and group for setup.
+- Install python modules
 ```bash
-./sar2html -s
+pip3 install -r requirements.txt
 ```
-or 
+- Run
 ```bash
-./sar2html -c
+python3 sar2html.py
 ```
-- Open http://<ip_address_of_your_webserver>/index.php
+- Open http://<ip_address_of_your_host>:5000
 - Now it is ready to work.
 
 ## RECENT CHANGES
+#### 4.0.0
+- Leaving apache, php behind... sar2html is pure python now.
 #### 3.2.2
 - sar2html supports Ubuntu 20 now.
 - minor fixes
