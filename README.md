@@ -12,7 +12,7 @@ docker run -p 5000:5000 -v /data:/sar2html/data -d -h sar2html.localdomain cemta
 ```
 Otherwise you may directly run the image:
 ```bash
-docker run -p 5000:5000 -h sar2html.localdomain cemtan/sar2html:4.0.0
+docker run -p 5000:5000 -d -h sar2html.localdomain cemtan/sar2html:4.0.0
 ```
 
 ### ON KUBERNETES

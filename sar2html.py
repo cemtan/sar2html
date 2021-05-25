@@ -25,7 +25,7 @@ import time
 
 def initializeDb ():
     try:
-        s2con = sqlite3.connect('data/db/hosts.db') 
+        s2con = sqlite3.connect('data/hosts.db') 
         s2cur =  s2con.cursor()
         sqlCommand = '''CREATE TABLE "hosts" (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, os TEXT NOT NULL)'''
         s2cur.execute(sqlCommand)
@@ -36,10 +36,10 @@ def initializeDb ():
             s2cur.close()
             s2con.close()
     for (s2os, s2osDef) in s2def.items():
-        if not os.path.isfile('data/db/%s.db' % s2os):
+        if not os.path.isfile('data/%s.db' % s2os):
             try:
                 print("Creating database %s" % (s2os))
-                s2con = sqlite3.connect('data/db/%s.db' % s2os) 
+                s2con = sqlite3.connect('data/%s.db' % s2os) 
                 s2cur =  s2con.cursor()
                 s2special = s2osDef['special'].split(sep=" ")
                 for (s2param, defs) in s2osDef['options'].items():
@@ -72,7 +72,7 @@ def updateDb (s2hostList, s2dir):
             tar.extractall(path=s2tmp)
         for s2os in os.listdir(s2tmp + '/sar2html'):
             try:
-                s2con = sqlite3.connect('data/db/%s.db' % s2os.lower())
+                s2con = sqlite3.connect('data/%s.db' % s2os.lower())
                 s2cur =  s2con.cursor()
                 for s2host in os.listdir(s2tmp + '/sar2html/%s' % s2os):
                     s2List.append(s2host)
@@ -115,7 +115,7 @@ def updateDb (s2hostList, s2dir):
         for s2os in os.listdir(s2tmp + '/sar2html'):
             for s2host in os.listdir(s2tmp + '/sar2html/%s' % s2os):
                 try:
-                    s2con = sqlite3.connect('data/db/hosts.db')
+                    s2con = sqlite3.connect('data/hosts.db')
                     s2cur =  s2con.cursor()
                     sqlCommand = 'SELECT * from "hosts" where name = "{}"'.format(s2host)
                     hostControl = s2cur.execute(sqlCommand)
@@ -140,7 +140,7 @@ def updateDb (s2hostList, s2dir):
 def emptyDb ():
     for (s2os, s2osDef) in s2def.items():
         try:
-            s2con = sqlite3.connect('data/db/%s.db' % s2os) 
+            s2con = sqlite3.connect('data/%s.db' % s2os) 
             for (s2param, defs) in s2osDef['options'].items():
                 for metric in defs['data']:
                     s2table = defs['alias'] + "." + metric["id"]
@@ -180,7 +180,7 @@ def deleteFromDb (hostId, range):
         range = []
 
     try:
-        s2con = sqlite3.connect('data/db/%s.db' % s2os)
+        s2con = sqlite3.connect('data/%s.db' % s2os)
         s2cur =  s2con.cursor()
         for (s2param, defs) in s2def[s2os]['options'].items():
             for metric in defs['data']:
@@ -311,7 +311,7 @@ def getPlot(source, dev, init, title):
     return myplot
 
 def getDbConnection(dbName):
-    conn = sqlite3.connect('data/db/' + dbName)
+    conn = sqlite3.connect('data/' + dbName)
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -328,7 +328,7 @@ def jsonDir(data, data_dir='static/json'):
     return pipe(data, alt.to_json(filename=data_dir + '/{prefix}-{hash}.{extension}') )
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'data/tmp'
+app.config['UPLOAD_FOLDER'] = 'tmp'
 app.config['UPLOAD_EXTENSIONS'] = ['.tar', '.gz', '.tar.gz']
 app.config['DROPZONE_UPLOAD_MULTIPLE'] = True
 app.config['SECRET_KEY'] = 'sar209@dnmduf8!23jQa'
@@ -346,12 +346,11 @@ except:
     exit(1)
 
 os.makedirs('data', exist_ok=True)
-os.makedirs('data/db', exist_ok=True)
-os.makedirs('data/tmp', exist_ok=True)
+os.makedirs('tmp', exist_ok=True)
 os.makedirs('static/json', exist_ok=True)
 deleteJson()
 
-if not os.path.isfile('data/db/hosts.db'):
+if not os.path.isfile('data/hosts.db'):
     initializeDb()
 
 @app.route('/')
@@ -386,7 +385,7 @@ def post(host_id):
     host = getHost(host_id)
     s2os = host['os']
     s2host = host['name']
-    conn = sqlite3.connect('data/db/' + s2os + '.db')
+    conn = sqlite3.connect('data/' + s2os + '.db')
     df = pd.read_sql_query('SELECT * FROM "{}" WHERE name = "{}"'.format(s2def[s2os]['options']['b']['alias'] + '.1', host['name']), conn)
     df['date'] = pd.to_datetime(df['date'])
     datedf = df['date'].dt.date.drop_duplicates()
