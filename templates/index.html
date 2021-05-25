@@ -49,9 +49,14 @@
             <li>For HPUX servers run "sh sar2ascii".</li>
             <li>For Linux or Sun Solaris servers run "bash sar2ascii".</li>
             <li>It will create the report with name sar2html-hostname-date.tar.gz under /tmp directory.</li>
-	    <li>Copy it to your local folder</li>
-	    <li>Open sar2html</li>
-            <li>Click "New Host" button, browse and select the report, click "OK" to upload the data.</li>
+        </ul>
+        Upload the report to sar2html by using one of the following ways:
+        <ul>
+            <li>Open sar2html and click "New Host" button, browse and select the report, click "OK" to upload the data.</li>
+            <li>Directly upload by using sar2html API:</li>
+            <ul>
+                <li>curl -F "file=@{Report File Name}" {sar2html_IP_or_hostname}:5000</li>
+            </ul>
         </ul>
     	</span>
 </div>
