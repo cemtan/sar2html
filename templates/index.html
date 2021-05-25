@@ -42,20 +42,39 @@
         <br>
         <span style="font-size:8pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">
         <br>
-        Use sar2ascii to generate a report:
+        There are two ways of gathering system statistics from hosts:
         <ul>
-            <li>Download following tool to collect sar data from servers: <a href="/static/sar2ascii.tar">sar2ascii.tar</a>.</li>
-            <li>Untar it on the server which you will examine performance data.</li>
-            <li>For HPUX servers run "sh sar2ascii".</li>
-            <li>For Linux or Sun Solaris servers run "bash sar2ascii".</li>
-            <li>It will create the report with name sar2html-hostname-date.tar.gz under /tmp directory.</li>
-        </ul>
-        Upload the report to sar2html by using one of the following ways:
-        <ul>
-            <li>Open sar2html and click "New Host" button, browse and select the report, click "OK" to upload the data.</li>
-            <li>Directly upload by using sar2html API:</li>
+            1. Manually generating and uploading sar report:
             <ul>
-                <li>curl -F "file=@{Report File Name}" {sar2html_IP_or_hostname}:5000</li>
+                <li>Be sure that sysstat package is installed on your host(s) and collecting performance data.</li>
+                <li>Download <a href="/static/sar2ascii.tar">sar2ascii.tar</a> to collect sar data from servers.</li>
+                <li>Untar it on the server which you will examine performance data.</li>
+                <li>For HPUX servers run:</li>
+                <ul><li><b>sh sar2ascii</b></li></ul>
+                <li>For Linux or Sun Solaris servers run:</li>
+                <ul><li><b>"bash sar2ascii</b></li></ul>
+                <li>It will create the report with name sar2html-hostname-date.tar.gz under /tmp directory.</li>
+                <li>Upload the report to sar2html by using one of the following ways:</li>
+                <ul>
+                    <li>Open sar2html and click "New Host" button, browse and select the report, click "OK" to upload the data.</li>
+                    <li>Directly upload by using sar2html API like;</li>
+                    <ul>
+                        <li><b>curl -F "file=@/tmp/sar2html-localhost-1407101131.tar.gz" sar2html.localhost:5000</b></li>
+                    </ul>
+                </ul>
+            </ul>
+            <br>
+            2. Streaming sar data through the sar2html API:
+            <ul>
+                <li>Be sure that sysstat package is installed on your host(s).</li>
+                <li>Download <a href="/static/sar2ascii.tar">sar2ascii.tar</a> to collect sar data from servers.</li>
+                <li>Untar it on the server which you will examine performance data.</li>
+                <li>Copy sar2ascii to a proper location.</li>
+                <li>Add an entry to the crontab to collect data like;</li>
+                <ul>
+                    <li><b>* * * * * /bin/bash -c "/usr/local/bin/sar2ascii -s sar2html.localdomain:5000"</b></li>
+                </ul>
+                <li><b>PS:</b>Use bash for Linux and Solaris, sh for HPUX. And remember that curl must already be installed.</li>
             </ul>
         </ul>
     	</span>
