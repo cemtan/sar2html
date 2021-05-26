@@ -22,5 +22,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . /sar2html
 
-#CMD [ "./startWeb" ]
+EXPOSE 5000
 ENTRYPOINT ["./startWeb"]
