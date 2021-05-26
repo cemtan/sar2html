@@ -1,6 +1,6 @@
 # sar2html 4.0.0
 
-sar2gtml is the plotting tool for system statistics (sar data) of following operating systems:
+sar2html is the plotting tool for system statistics (sar data) of following operating systems:
 - HPUX 11.11, 11.23, 11,31
 - Redhat 3, 4, 5, 6, 7
 - Suse 8, 9, 10, 11, 12,
