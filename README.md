@@ -1,7 +1,11 @@
 # sar2html 4.0.0
 
-Plotting tool for system stats (sar data).
-HPUX 11.11, 11.23, 11,31, Redhat 3, 4, 5, 6, 7, Suse 8, 9, 10, 11, 12, Ubuntu 18, 20 and Solaris 5.9, 5.10, 5.11 are supported.
+sar2gtml is the plotting tool for system statistics (sar data) of following operating systems:
+- HPUX 11.11, 11.23, 11,31
+- Redhat 3, 4, 5, 6, 7
+- Suse 8, 9, 10, 11, 12,
+- Ubuntu 18, 20
+- Solaris 5.9, 5.10, 5.11 are supported.
 
 ## RUNNING THE DOCKER IMAGE 
 ### ON DOCKER
