@@ -6,3 +6,4 @@ altair
 altair_data_server
 pandas
 vega_datasets
+markdown
