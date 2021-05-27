@@ -1,6 +1,7 @@
 # sar2html 4.0.0
 
 sar2html is the plotting tool for system statistics (sar data) of following operating systems:
+
 - HPUX 11.11, 11.23, 11,31
 - Redhat 3, 4, 5, 6, 7
 - Solaris 5.9, 5.10, 5.11
@@ -9,95 +10,101 @@ sar2html is the plotting tool for system statistics (sar data) of following oper
 
 ## RUNNING THE DOCKER IMAGE 
 ### ON DOCKER
-If you want your performance data to be persistent you need to create directory for them in your host: 
-```bash
-mkdir /data
-docker run -p 5000:5000 -v /data:/sar2html/data -d -h sar2html.localdomain cemtan/sar2html:4.0.0
-```
+If you want your performance data to be persistent you need to create directory in your host and mount it to /sar2html/data like data folder below: 
+
+> **docker run -p 5000:5000 -v /data:/sar2html/data -d -h sar2html.localdomain cemtan/sar2html:4.0.0**
+
 Otherwise you may directly run the image:
-```bash
-docker run -p 5000:5000 -d -h sar2html.localdomain cemtan/sar2html:4.0.0
-```
+
+> **docker run -p 5000:5000 -d -h sar2html.localdomain cemtan/sar2html:4.0.**0
 
 ### ON KUBERNETES
-- Simply run
-```bash
-kubectl run sar2html --image=cemtan/sar2html:4.0.0 --port=5000 --expose
-```
-- Or download repository and enter the directory
-```bash
-git clone https://github.com/cemtan/sar2html.git
-cd sar2html/conf/kubernetes
-```
+Simply run
+
+> **kubectl run sar2html --image=cemtan/sar2html:4.0.0 --port=5000 --expose**
+
+Or download repository and enter the directory
+
+> **git clone https://github.com/cemtan/sar2html.git**
+
+> **cd sar2html/conf/kubernetes**
+
 - Deploy docker image
-  - If you want your performance data to be persistent you need to create directory for them in your host:
-    ```bash
-    kubectl apply -f sar2html-pvc.yaml
-    kubectl apply -f sar2html-deploy-persistent.yaml
-    ```
-  - Otherwise you may directly run the image:
-    ```bash
-    kubectl apply -f sar2html-deploy-ephemeral.yaml
-    ```
-  - Expose your pod. 
-  - For local installation of kubernetes (like minikube, microk8s...):
-    ```bash
-            kubectl apply -f sar2html-service-nodeport.yaml
-    ```
-  - For kubernetes which is able to use loadbalancer:
-    ```bash
-            kubectl apply -f sar2html-service-loadbalancer.yaml
-    ```
+
+    - If you want your performance data to be persistent you need to create directory for them in your host:
+
+        > **kubectl apply -f sar2html-pvc.yaml**
+
+        > **kubectl apply -f sar2html-deploy-persistent.yaml**
+
+    - Otherwise you may directly run the image:
+
+        > **kubectl apply -f sar2html-deploy-ephemeral.yaml**
+
+    - Expose your pod. 
+
+    - For local installation of kubernetes (like minikube, microk8s...):
+
+        > **kubectl apply -f sar2html-service-nodeport.yaml**
+
+    - For kubernetes which is able to use loadbalancer:
+
+        > **kubectl apply -f sar2html-service-loadbalancer.yaml**
 
 ### ON OPENSHIFT CONTAINER PLATFORM
-- Download repository and enter the directory
-```bash
-git clone https://github.com/cemtan/sar2html.git
-cd sar2html/conf/ocp
-```
-- On master node create template from the sar2html.yaml
-```bash
-oc create -f sar2html.yaml 
-```
+Download repository and enter the directory
+
+> **git clone https://github.com/cemtan/sar2html.git**
+
+> **cd sar2html/conf/ocp**
+
+On master node create template from the sar2html.yaml
+
+> **oc create -f sar2html.yaml**
+
 Now you may search for "SAR Database and Plotter" in Service Catalog and you may deploy sar2html through web-console.
 
 ## CREATING THE DOCKER IMAGE
-- Download repository and enter the directory
-```bash
-git clone https://github.com/cemtan/sar2html.git
-cd sar2html
-```
-- If you are behind proxy edit 3 lines regarding proxy in dockerile
-```bash
-ENV http_proxy <YOUR HTTP PROXY>
-ENV https_proxy <YOUR HTTPS PROXY>
-RUN pear config-set http_proxy <YOUR HTTP PROXY>
-```
-- If you want to build tour own image, clone repository or download source code and extract it:
-```bash
-sudo docker build --tag sar2html:4.0.0 .
-```
+Download repository and enter the directory
+
+> **git clone https://github.com/cemtan/sar2html.git**
+> **cd sar2html**
+
+If you are behind proxy edit 3 lines regarding proxy in dockerile and remove comment sign
+
+  - `#ENV http_proxy <YOUR HTTP PROXY>`
+
+  - `#ENV https_proxy <YOUR HTTPS PROXY>`
+
+  - `#RUN pear config-set http_proxy <YOUR HTTP PROXY>`
+
+
+If you want to build tour own image, clone repository or download source code and extract it:
+
+> **sudo docker build --tag sar2html:4.0.0 .**
 
 ## INSTALLATION ON PHYSICAL OR VIRTUAL MACHINE
--------------------
 - Install 
-  - python3
-  - python3-dev
-  - gcc
-  - libc-dev
+
+    - `python3`
+    - `python3-dev`
+    - `gcc`
+    - `libc-dev`
+
 - Download repository and enter the repository
-```bash
-git clone https://github.com/cemtan/sar2html.git
-cd sar2html
-```
+
+    > **git clone https://github.com/cemtan/sar2html.git**
+    
+    > **cd sar2html**
+
 - Install python modules
-```bash
-pip3 install -r requirements.txt
-```
+
+    > **pip3 install -r requirements.txt**
+
 - Run
-```bash
-python3 sar2html.py
-```
+
+    > **python3 sar2html.py**
+
 - Open http://<ip_address_of_your_host>:5000
 - Now it is ready to work.
 
