@@ -172,10 +172,10 @@ def emptyDb():
 def deleteJson():
     now = datetime.now()
     now = (now - datetime(1970,1,1)).total_seconds()
-    for f in os.listdir('static/json'):
-        if os.stat('static/json/{}'.format(f)).st_mtime < now - 300:
-            if os.path.isfile('static/json/{}'.format(f)):
-                os.remove('static/json/{}'.format(f))
+    for f in os.listdir(jsonFolder):
+        if os.stat(jsonFolder + '/{}'.format(f)).st_mtime < now - 300:
+            if os.path.isfile(jsonFolder + '/{}'.format(f)) and '.json' in f:
+                os.remove(jsonFolder + '/{}'.format(f))
     threading.Timer(300, deleteJson).start()
 
 
@@ -337,11 +337,12 @@ def getHost(host_id):
     return host
 
 
-def jsonDir(data, data_dir='static/json'):
-    return pipe(data, alt.to_json(filename=data_dir + '/{prefix}-{hash}.{extension}'))
+def jsonDir(data, dataDir):
+    return pipe(data, alt.to_json(filename=dataDir + '/{prefix}-{hash}.{extension}'))
 
 
 app = Flask(__name__)
+jsonFolder = 'static/json'
 app.config['UPLOAD_FOLDER'] = 'tmp'
 app.config['UPLOAD_EXTENSIONS'] = ['.tar', '.gz', '.tar.gz']
 app.config['DROPZONE_UPLOAD_MULTIPLE'] = True
@@ -349,7 +350,7 @@ app.config['SECRET_KEY'] = 'sar209@dnmduf8!23jQa'
 alt.renderers.enable('default')
 # alt.data_transformers.enable('data_server')
 alt.data_transformers.register('jsonDir', jsonDir)
-alt.data_transformers.enable('jsonDir', data_dir='static/json')
+alt.data_transformers.enable('jsonDir', dataDir=jsonFolder)
 
 try:
     data_file = open('conf/sar2def.json')
@@ -361,7 +362,7 @@ except:
 
 os.makedirs('data', exist_ok=True)
 os.makedirs('tmp', exist_ok=True)
-os.makedirs('static/json', exist_ok=True)
+os.makedirs(jsonFolder, exist_ok=True)
 deleteJson()
 
 if not os.path.isfile('data/hosts.db'):
