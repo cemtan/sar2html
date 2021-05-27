@@ -10,6 +10,9 @@ sar2html is the plotting tool for system statistics (sar data) of following oper
 ## RUNNING THE DOCKER IMAGE 
 ### ON DOCKER
 If you want your performance data to be persistent you need to create directory for them in your host: 
+
+> **docker run -p 5000:5000 -v /data:/sar2html/data -d -h sar2html.localdomain cemtan/sar2html:4.0.0**
+
 ```bash
 mkdir /data
 docker run -p 5000:5000 -v /data:/sar2html/data -d -h sar2html.localdomain cemtan/sar2html:4.0.0
