@@ -26,8 +26,8 @@ def initializeDb():
     try:
         s2con = sqlite3.connect('data/hosts.db')
         s2cur = s2con.cursor()
-        sqlCommand = '''CREATE TABLE "hosts" (id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                        name TEXT NOT NULL, date TIMESTAMP NOT NULL DEFAULT 
+        sqlCommand = '''CREATE TABLE "hosts" (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        name TEXT NOT NULL, date TIMESTAMP NOT NULL DEFAULT
                         CURRENT_TIMESTAMP, os TEXT NOT NULL)'''
         s2cur.execute(sqlCommand)
     except sqlite3.Error as error:
@@ -66,7 +66,7 @@ def initializeDb():
                     s2con.close()
 
 
-def updateDb (s2hostList, s2dir):
+def updateDb(s2hostList, s2dir):
     s2List = []
     for s2filename in s2hostList:
         s2tmp = s2dir + '/' + s2filename.split('.')[0]
@@ -85,7 +85,8 @@ def updateDb (s2hostList, s2dir):
                             s2datafile = s2param + "." + metric["id"]
                             for s2file in os.listdir(s2tmp + '/sar2html/%s/%s/report' % (s2os, s2host)):
                                 if s2file.startswith(s2datafile):
-                                    s2df = pd.read_csv(s2tmp + '/sar2html/%s/%s/report/%s' % (s2os, s2host, s2file), sep=" ", header=None)
+                                    s2df = pd.read_csv(s2tmp + 
+                                        '/sar2html/%s/%s/report/%s' % (s2os, s2host, s2file), sep=" ", header=None)
                                     s2dftime = s2df[0].str.replace('.', '-', regex=True) + " " + s2df[1]
                                     s2df[1] = s2dftime
                                     s2df[0] = s2host
@@ -102,12 +103,12 @@ def updateDb (s2hostList, s2dir):
                                     s2df.columns = s2col
                                     s2df.to_sql(s2table, s2con, if_exists='append', index=False)
                                     if s2param in s2special:
-                                        sqlCommand = '''DELETE FROM "{}" WHERE name = "{}" and rowid not in 
-                                                        (SELECT min(rowid) FROM "{}" WHERE name = "{}" GROUP BY date, name, 
+                                        sqlCommand = '''DELETE FROM "{}" WHERE name = "{}" and rowid not in
+                                                        (SELECT min(rowid) FROM "{}" WHERE name = "{}" GROUP BY date, name,
                                                         dev)'''.format(s2table, s2host, s2table, s2host)
                                     else:
-                                        sqlCommand = '''DELETE FROM "{}" WHERE name = "{}" and rowid not in 
-                                                        (SELECT min(rowid) FROM "{}" WHERE name = "{}" GROUP BY date, 
+                                        sqlCommand = '''DELETE FROM "{}" WHERE name = "{}" and rowid not in
+                                                        (SELECT min(rowid) FROM "{}" WHERE name = "{}" GROUP BY date,
                                                         name)'''.format(s2table, s2host, s2table, s2host)
                                     s2con.execute(sqlCommand)
                                     s2con.commit()
@@ -171,7 +172,7 @@ def emptyDb():
 
 def deleteJson():
     now = datetime.now()
-    now = (now - datetime(1970,1,1)).total_seconds()
+    now = (now - datetime(1970, 1, 1)).total_seconds()
     for f in os.listdir(jsonFolder):
         if os.stat(jsonFolder + '/{}'.format(f)).st_mtime < now - 300:
             if os.path.isfile(jsonFolder + '/{}'.format(f)) and '.json' in f:
@@ -239,7 +240,7 @@ def deleteFromDb(hostId, range):
 
 def getPlot(source, dev, init, title):
     label = alt.selection(type='single', nearest=True, on='mouseover',
-            fields=['date'], empty='none')
+        fields=['date'], empty='none')
 
     selection = alt.selection_multi(fields=['variable'], bind='legend')
     if dev:
@@ -391,7 +392,7 @@ def uploadFiles():
             if fileExt in app.config['UPLOAD_EXTENSIONS']:
                 uploadedFile.save(os.path.join(app.config['UPLOAD_FOLDER'], fileName))
                 hostList.append(fileName)
-    
+
     updateThread = AppContextThread(target=updateDb(hostList, app.config['UPLOAD_FOLDER']))
     updateThread.start()
     updateThread.join()
@@ -447,7 +448,7 @@ def post(host_id):
 
                 if s2param in s2special:
                     s2df = s2df.sort_values(["dev", "date"])
-                    s2df = pd.melt(s2df, id_vars=['name','date', 'dev'], value_vars=s2par)
+                    s2df = pd.melt(s2df, id_vars=['name', 'date', 'dev'], value_vars=s2par)
                     s2init = s2df.sort_values('dev')['dev'].unique()[0]
                     s2dev = True
                 else:
@@ -506,7 +507,10 @@ def sortByDate():
 def about():
     markdownFile = open('README.md', 'r')
     markdownContent = markdownFile.read()
-    MarkdownHtml = markdown.markdown(markdownContent, extensions=['markdown.extensions.attr_list', 'markdown.extensions.codehilite', 'markdown.extensions.fenced_code'])
+    MarkdownHtml = markdown.markdown(markdownContent, extensions=[
+        'markdown.extensions.attr_list',
+        'markdown.extensions.codehilite',
+        'markdown.extensions.fenced_code'])
     return render_template('about.html', MarkdownHtml=MarkdownHtml)
 
 
