@@ -69,6 +69,7 @@ Now you may search for "SAR Database and Plotter" in Service Catalog and you may
 Download repository and enter the directory
 
 > **git clone https://github.com/cemtan/sar2html.git**
+>
 > **cd sar2html**
 
 If you are behind proxy edit 3 lines regarding proxy in dockerile and remove comment sign
