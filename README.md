@@ -17,7 +17,7 @@ If you want your performance data to be persistent you need to create data direc
 
 Otherwise you may directly run the image:
 
-> **docker run -p 5000:5000 -d -h sar2html.localdomain cemtan/sar2html:4.0.**0
+> **docker run -p 5000:5000 -d -h sar2html.localdomain cemtan/sar2html:4.0.0**
 
 ### ON KUBERNETES
 Simply run
