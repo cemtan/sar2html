@@ -74,11 +74,11 @@ Download repository and enter the directory
 
 If you are behind proxy edit 3 lines regarding proxy in dockerile and remove comment sign
 
-  - `#ENV http_proxy <YOUR HTTP PROXY>`
-
-  - `#ENV https_proxy <YOUR HTTPS PROXY>`
-
-  - `#RUN pear config-set http_proxy <YOUR HTTP PROXY>`
+  > `#ENV http_proxy <YOUR HTTP PROXY>`
+  >
+  > `#ENV https_proxy <YOUR HTTPS PROXY>`
+  >
+  > `#RUN pear config-set http_proxy <YOUR HTTP PROXY>`
 
 
 If you want to build tour own image, clone repository or download source code and extract it:
