@@ -27,7 +27,7 @@ Simply run
 Or download repository and enter the directory
 
 > **git clone https://github.com/cemtan/sar2html.git**
-
+>
 > **cd sar2html/conf/kubernetes**
 
 - Deploy docker image
@@ -35,7 +35,7 @@ Or download repository and enter the directory
     - If you want your performance data to be persistent you need to create directory for them in your host:
 
         > **kubectl apply -f sar2html-pvc.yaml**
-
+        >
         > **kubectl apply -f sar2html-deploy-persistent.yaml**
 
     - Otherwise you may directly run the image:
@@ -56,7 +56,7 @@ Or download repository and enter the directory
 Download repository and enter the directory
 
 > **git clone https://github.com/cemtan/sar2html.git**
-
+>
 > **cd sar2html/conf/ocp**
 
 On master node create template from the sar2html.yaml
@@ -96,7 +96,7 @@ If you want to build tour own image, clone repository or download source code an
 - Download repository and enter the repository
 
     > **git clone https://github.com/cemtan/sar2html.git**
-    
+    >
     > **cd sar2html**
 
 - Install python modules
