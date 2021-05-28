@@ -117,3 +117,15 @@
 	position: absolute;
 	z-index: -1;
 }
+
+input[type=text] {
+  width: 420px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid lightgreen;
+}
+
+input, select, textarea {
+color: gray;
+}

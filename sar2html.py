@@ -372,11 +372,15 @@ if not os.path.isfile('data/hosts.db'):
 
 @app.route('/')
 def index(sort='name'):
+    conn = getDbConnection('hosts.db')
     if 'sort' in request.args:
         sort = request.args['sort']
         request.args.clear
-    conn = getDbConnection('hosts.db')
     hosts = conn.execute('SELECT * FROM hosts ORDER by {}'.format(sort)).fetchall()
+    if 'search' in request.args:
+        searchText = request.args['search']
+        sqlQuery = "SELECT * FROM hosts WHERE (name || os) LIKE '%{}%' ORDER by {}".format(searchText, sort)
+        hosts = conn.execute(sqlQuery).fetchall()
     conn.close()
     return render_template('index.html', hosts=hosts)
 
@@ -501,6 +505,11 @@ def sortByOs():
 @app.route('/sortbyDate')
 def sortByDate():
     return redirect(url_for('index', sort='date, name'))
+
+@app.route('/search', methods=['POST'])
+def search():
+    searchText = request.form['search']
+    return redirect(url_for('index', search=searchText))
 
 
 @app.route('/about')

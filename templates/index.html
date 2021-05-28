@@ -2,6 +2,10 @@
 
 {% block content %}
 <div class="sidebar">
+    <form id="search" action="{{ url_for('search') }}" method=post enctype=multipart/form-data onchange="this.form.submit()">
+	<input type="text" id="search" name="search" placeholder="Search..">
+    </form>
+    <br>
     <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
         <tr style="border-bottom: 1px solid #D0D0D0;">
             <td class="tabletite" style="width:190px;"><h7><a style="color: chocolate;" href="{{ url_for('sortByName') }}">Host</a></h7></td>
@@ -10,6 +14,7 @@
             <td class="tabletite" style="width:30px;"><h7><a style="color: chocolate;" href="{{ url_for('deleteAll') }}" onclick="return confirm('Are you sure you wish to delete all hosts?')">Action</a></h7></td>
         </tr>
     {% for host in hosts %}
+        <tr>
         <td style="width:190px;">
         <a href="{{ url_for('post', host_id=host['id']) }}">
             <h8>{{ host['name'] }}</h8>
