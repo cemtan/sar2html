@@ -1,5 +1,7 @@
 # sar2html 4.0.0
 
+![image](https://user-images.githubusercontent.com/2609090/159454126-74720008-a7a9-468b-a9d4-d228d7fb60d5.png)
+
 sar2html is the plotting tool for system statistics (sar data) of following operating systems:
 
 - HPUX 11.11, 11.23, 11,31
