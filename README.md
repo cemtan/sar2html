@@ -1,7 +1,5 @@
 # sar2html 4.0.0
 
-![image](https://user-images.githubusercontent.com/2609090/159454126-74720008-a7a9-468b-a9d4-d228d7fb60d5.png)
-
 sar2html is the plotting tool for system statistics (sar data) of following operating systems:
 
 - HPUX 11.11, 11.23, 11,31
@@ -9,6 +7,8 @@ sar2html is the plotting tool for system statistics (sar data) of following oper
 - Solaris 5.9, 5.10, 5.11
 - Suse 8, 9, 10, 11, 12
 - Ubuntu 18, 20
+
+![image](https://user-images.githubusercontent.com/2609090/159454126-74720008-a7a9-468b-a9d4-d228d7fb60d5.png)
 
 ## RUNNING THE DOCKER IMAGE 
 ### ON DOCKER
